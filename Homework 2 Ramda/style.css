@@ -35,6 +35,7 @@
 .header-navbar-list {
     margin: 0;
     padding: 0;
+    font-size: 0;
 }
 
 .header-navbar-list-item {
@@ -42,8 +43,12 @@
     border-left: 1px solid #FFFFFF;
 }
 
+.header-navbar-list-item:hover {
+    background-color: #222F3A;
+}
+
 .header-navbar-link {
-    margin: 26px 32px 19px;
+    margin: 26px 32px 18px;
     display: block;
     text-decoration: none;
     font-size: 24px;
@@ -54,6 +59,7 @@
 /*main-block*/
 .main-block {
     margin-top: 50px;
+    font-size: 0;
 }
 
 .left-menu {
@@ -73,16 +79,33 @@
 
 .left-menu-list-item {
     height: 81px;
-    margin-left: 44px;
+    width: 344px;
     padding-top: 27px;
     padding-bottom: 27px;
+    padding-left: 44px;
     box-sizing: border-box;
     display: inline-block;
+
+}
+
+.left-menu-list-item:hover {
+    background-color: #DBDBDB;
 }
 
 .left-menu-link {
     text-decoration: none;
-    color: #485863;
+    color: #495863;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.0s ease-in-out;
+    display: block;
+}
+
+.left-menu-list-item:hover .left-menu-link {
+    -webkit-transform: translate(35px, 0);
+    -moz-transform: translate(35px, 0);
+    -o-transform: translate(35px, 0);
+    color: black;
 }
 
 .right-menu {
@@ -109,8 +132,8 @@
 }
 
 .right-menu-block-with-img:hover .img {
-     transform: scale(1.2);
- }
+    transform: scale(1.2);
+}
 
 .right-menu-text-block1 {
     margin-top: 37px;
@@ -155,11 +178,16 @@
     font-size: 28px;
     color: #0C1927;
     text-align: left;
-    margin: 0px 11px;
-    display: block;
+    margin: 0 11px;
     text-decoration: none;
     line-height: 28px;
 
+}
+
+.footer-menu-link:hover {
+    color: #3181A6;
+    padding-bottom: 12px;
+    border-bottom: 2px #3181A6 solid;
 }
 
 .copyright {
