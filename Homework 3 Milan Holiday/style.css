@@ -41,8 +41,20 @@
     color: #FFFFFF;
 
 }
-.header-left-part:hover {
+
+.header-left-part:hover .header-milan-link {
     color: #F26522;
+}
+
+.header-left-part:hover .header-holiday-link {
+    color: #F26522;
+}
+
+
+.header-left-part:hover .img-logo {
+    visibility: hidden;
+    background-image: url("img/logo2.png");
+
 }
 
 .header-right-part {
@@ -59,9 +71,14 @@
     font-size: 18px;
     line-height: 18px;
 }
-/*.header-right-part:hover {*/
-/*    color: #F26522;*/
-/*}*/
+
+.header-right-part:hover .header-email {
+    color: #F26522;
+}
+
+.header-right-part:hover .header-phone-number {
+    color: #F26522;
+}
 
 .header-phone-number {
     margin-top: 19px;
@@ -86,7 +103,7 @@
     float: left;
     margin-right: 59px;
     box-sizing: border-box;
-}
+   }
 
 .sub-blocks-pictures:last-child {
     margin-right: 0;
@@ -95,6 +112,11 @@
 .main-block-img {
     display: block;
     box-sizing: border-box;
+
+}
+.sub-blocks-pictures-link {
+    display: block;
+    position: relative;
 }
 
 .text {
@@ -107,6 +129,60 @@
 
 .text:hover {
     color: #F26522;
+}
+
+.hidden-menu {
+    display: none;
+    box-sizing: border-box;
+    background-color: #F26522;
+    width: 300px;
+    height: 55px;
+    margin: 0 2px;
+    position: absolute;
+    bottom: 0;
+}
+
+.from {
+    text-decoration: none;
+    position: absolute;
+    font-size: 10px;
+    line-height: 10px;
+    left: 16px;
+    top: 7px;
+    color: #FFFFFF;
+}
+
+.price {
+    text-decoration: none;
+    position: absolute;
+    left: 16px;
+    bottom: 12px;
+    font-size: 20px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.view-details {
+    text-decoration: none;
+    position: absolute;
+    right: 37px;
+    bottom: 12px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #FFFFFF;
+}
+
+.view-details::after {
+    content: "  >";
+    font-size: 15px;
+}
+
+/*.sub-blocks-pictures:hover .hidden-menu  {*/
+/*    display: block;*/
+
+/*}*/
+.sub-blocks-pictures-link:hover .hidden-menu {
+    display: block;
 }
 
 .footer {
