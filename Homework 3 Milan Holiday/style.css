@@ -50,11 +50,18 @@
     color: #F26522;
 }
 
+.img-logo2 {
+    display: none;
+    float:left;
+    margin-right: 8px;
+}
 
 .header-left-part:hover .img-logo {
-    visibility: hidden;
-    background-image: url("img/logo2.png");
+    display: none;
+}
 
+.header-left-part:hover .img-logo2 {
+    display: block;
 }
 
 .header-right-part {
@@ -103,7 +110,7 @@
     float: left;
     margin-right: 59px;
     box-sizing: border-box;
-   }
+}
 
 .sub-blocks-pictures:last-child {
     margin-right: 0;
@@ -114,6 +121,7 @@
     box-sizing: border-box;
 
 }
+
 .sub-blocks-pictures-link {
     display: block;
     position: relative;
