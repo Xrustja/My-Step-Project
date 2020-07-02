@@ -79,11 +79,11 @@
     line-height: 18px;
 }
 
-.header-right-part:hover .header-email {
+.header-email:hover {
     color: #F26522;
 }
 
-.header-right-part:hover .header-phone-number {
+.header-phone-number:hover  {
     color: #F26522;
 }
 
@@ -185,10 +185,7 @@
     font-size: 15px;
 }
 
-/*.sub-blocks-pictures:hover .hidden-menu  {*/
-/*    display: block;*/
 
-/*}*/
 .sub-blocks-pictures-link:hover .hidden-menu {
     display: block;
 }
