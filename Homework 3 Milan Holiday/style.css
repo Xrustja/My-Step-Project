@@ -150,6 +150,11 @@
     bottom: 0;
 }
 
+.sub-blocks-pictures-link:hover .hidden-menu {
+    display: block;
+
+}
+
 .from {
     text-decoration: none;
     position: absolute;
@@ -173,7 +178,7 @@
 .view-details {
     text-decoration: none;
     position: absolute;
-    right: 37px;
+    right: 16px;
     bottom: 12px;
     font-size: 14px;
     line-height: 14px;
@@ -181,14 +186,10 @@
 }
 
 .view-details::after {
-    content: "  >";
-    font-size: 15px;
-}
+    content: ">";
+    margin-left: 16px;
+  }
 
-
-.sub-blocks-pictures-link:hover .hidden-menu {
-    display: block;
-}
 
 .footer {
     clear: both;
