@@ -117,11 +117,13 @@ header {
     width: 444px;
     margin: 0 auto;
     background-color: #FFFFFF;
-    padding: 31px 60px 0;
+    padding: 31px 60px 0 60px;
+    box-sizing: border-box;
 }
 
 .form-header {
     margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .green-square {
@@ -157,7 +159,7 @@ header {
     color: #3CB878;
     vertical-align: middle;
 }
-.facebook-btn {
+.social-btn {
     width: 160px;
     height: 48px;
     background: #305DB8;
@@ -169,7 +171,7 @@ header {
     border-radius: 4px;
     border: 1px #FFFFFF solid;
     box-sizing: border-box;
-}
+    }
 
 i {
     font-size: 24px;
@@ -177,12 +179,23 @@ i {
 
 .btn-vertical-line {
     width: 0;
-    border: 1px #2C56AA solid;
+    border-left: 1px #2C56AA solid;
     margin: 0 13px;
+    padding-top: 4px;
+    vertical-align: top;
+    line-height: 32px;
 }
 
-.facebook-btn-text{
-    padding: 7px 0;
+.social-btn-text{
+    vertical-align: top;
+    line-height: 28px
 }
+.google-btn{
+    background: #DF4A32;
+}
+.btn-vertical-line-google {
+    border-left: 1px #CD442E solid;
+}
+
 
 
