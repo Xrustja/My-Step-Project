@@ -9,7 +9,7 @@
     font-size: 18px;
     line-height: 18px;
     color: #FFFFFF;
-    padding: 51px 176px 0px 160px;
+    padding: 51px 176px 0 160px;
     box-sizing: border-box;
 }
 
@@ -52,7 +52,7 @@
 
 .img-logo2 {
     display: none;
-    float:left;
+    float: left;
     margin-right: 8px;
 }
 
@@ -83,7 +83,7 @@
     color: #F26522;
 }
 
-.header-phone-number:hover  {
+.header-phone-number:hover {
     color: #F26522;
 }
 
@@ -110,6 +110,7 @@
     float: left;
     margin-right: 59px;
     box-sizing: border-box;
+
 }
 
 .sub-blocks-pictures:last-child {
@@ -125,6 +126,7 @@
 .sub-blocks-pictures-link {
     display: block;
     position: relative;
+
 }
 
 .text {
@@ -188,7 +190,7 @@
 .view-details::after {
     content: ">";
     margin-left: 16px;
-  }
+}
 
 
 .footer {
