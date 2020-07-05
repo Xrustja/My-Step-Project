@@ -159,6 +159,7 @@ header {
     color: #3CB878;
     vertical-align: middle;
 }
+
 .social-btn {
     width: 160px;
     height: 48px;
@@ -171,7 +172,7 @@ header {
     border-radius: 4px;
     border: 1px #FFFFFF solid;
     box-sizing: border-box;
-    }
+}
 
 i {
     font-size: 24px;
@@ -181,21 +182,26 @@ i {
     width: 0;
     border-left: 1px #2C56AA solid;
     margin: 0 13px;
-    padding-top: 4px;
+    padding-top: 10px;
     vertical-align: top;
-    line-height: 32px;
+    line-height: 35px;
 }
 
-.social-btn-text{
+.social-btn-text {
     vertical-align: top;
     line-height: 28px
 }
-.google-btn{
+
+.google-btn {
     background: #DF4A32;
 }
+
 .btn-vertical-line-google {
     border-left: 1px #CD442E solid;
+    margin: 0 23px 0 0;
+
 }
+
 .horizontal-line {
     display: inline-block;
     width: 148px;
@@ -204,6 +210,7 @@ i {
     background: #F2F2F2;
 
 }
+
 .span-for-or {
     display: inline-block;
     margin: 0 3px;
@@ -212,14 +219,15 @@ i {
     font-family: Ubuntu, sans-serif;
     font-style: normal;
     font-size: 14px;
-    }
+}
 
 .vertical-line-container {
     margin-top: 49px;
     margin-bottom: 16px;
     box-sizing: border-box;
-    border:none;
+    border: none;
 }
+
 .name {
     box-sizing: border-box;
     width: 324px;
@@ -230,14 +238,68 @@ i {
     font-size: 14px;
     margin-bottom: 15px;
 }
-::-webkit-input-placeholder {color:#BEBEBE;}
-::-moz-placeholder          {color:#BEBEBE;}/* Firefox 19+ */
-:-moz-placeholder           {color:#BEBEBE;}/* Firefox 18- */
-:-ms-input-placeholder      {color:#BEBEBE;}
-/*.name:focus {*/
-/*    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.21);*/
-/*    border: 1px solid #F2F2F2;*/
-/*    border-radius: 4px;*/
-/*    background-color: #4BCAFF;*/
-/*}*/
 
+.name:last-child {
+    margin-bottom: 12px;
+}
+
+::-webkit-input-placeholder {
+    color: #BEBEBE;
+}
+
+::-moz-placeholder {
+    color: #BEBEBE;
+}
+
+:-moz-placeholder {
+    color: #BEBEBE;
+}
+
+:-ms-input-placeholder {
+    color: #c0392b;
+}
+
+.name:focus {
+    outline: none;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.21);
+    border: 1px solid #F2F2F2;
+    border-radius: 4px;
+
+}
+
+.checkbox {
+    box-sizing: border-box;
+    outline: none;
+    opacity: 0.1;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #F2F2F2;
+    border-radius: 0;
+}
+.agree {
+    text-decoration: none;
+    color: #434343;
+    height: 20px;
+}
+.agree2 {
+    color: #3CB878;
+}
+
+.submit {
+    font-family: Ubuntu,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    width: 324px;
+    height: 46px;
+    outline: none;
+    color: #FFFFFF;
+    border: 1px solid #F2F2F2;
+    background: rgba(60, 184, 120, 0.8);
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-bottom: 38px;
+
+
+}
