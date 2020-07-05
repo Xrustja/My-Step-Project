@@ -6,12 +6,6 @@ html {
     background-size: cover;
 }
 
-.main-container {
-    border: 0 transparent;
-    position: relative;
-    height: 100%;
-}
-
 header {
     height: 58px;
     background: rgba(0, 0, 0, 0.4);
@@ -31,6 +25,7 @@ header {
     align-items: center;
     color: #FFFFFF;
     float: left;
+    transition: color 0.2s linear;
 
 }
 
@@ -57,6 +52,7 @@ header {
 
 .icon1 {
     background-position: -9px -9px;
+    transition: background-position 0.05s step-end;
 }
 
 .icon-link:hover.icon1 {
@@ -65,6 +61,7 @@ header {
 
 .icon2 {
     background-position: -50px -9px;
+    transition: background-position 0.05s step-end;
 }
 
 .icon-link:hover.icon2 {
@@ -73,6 +70,7 @@ header {
 
 .icon3 {
     background-position: -93px -9px;
+    transition: background-position 0.05s step-end;
 }
 
 .icon-link:hover.icon3 {
@@ -103,24 +101,40 @@ header {
     font-weight: normal;
     font-size: 14px;
     line-height: 14px;
+
+}
+
+.log-in {
+    color: #FFFFFF;
+    transition: color 1s linear;
 }
 
 .authorization-link:hover .log-in {
     color: #236D47;
 }
 
+.sign-up {
+    color: #FFFFFF;
+    transition: color 1s linear;
+}
+
 .authorization-link:hover .sign-up {
     color: #236D47;
 }
 
+.main-container {
+    border: 0 transparent;
+    position: relative;
+    height: 800px;
+    width: 100%;
+}
+
 .form {
     position: absolute;
-    top: calc(50% - -5em);
-    left: 0;
-    right: 0;
+    top: calc(50% - 290px);
+    left: calc(50% - 222px);
     width: 444px;
-    /*height: 584px;*/
-    margin: 0 auto;
+    height: 590px;
     background-color: #FFFFFF;
     padding: 31px 60px 0 60px;
     box-sizing: border-box;
@@ -286,7 +300,7 @@ i {
 
 .name:focus {
     outline: none;
-    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.21);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.21);
     border: 1px solid #F2F2F2;
     border-radius: 4px;
 }
@@ -299,6 +313,7 @@ i {
     display: inline-block;
     position: relative;
 }
+
 .agree {
     color: #434343;
     font-family: Ubuntu, sans-serif;;
@@ -311,21 +326,13 @@ i {
 }
 
 .checkbox {
-    /*box-sizing: border-box;*/
-    /*outline: none;*/
-    /*opacity: 0.1;*/
-    /*width: 20px;*/
-    /*border: 1px solid #F2F2F2;*/
-    /*border-radius: 0;*/
-    /*margin: 0 8px 0 0;*/
-    /*height: 20px;*/
-
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
 }
+
 .checkmark {
     position: absolute;
     top: 0;
@@ -342,6 +349,7 @@ i {
     position: absolute;
     display: none;
 }
+
 .checkbox:checked ~ .checkmark:after {
     display: block;
 }
@@ -356,7 +364,7 @@ i {
     -webkit-transform: rotate(42deg);
     -ms-transform: rotate(42deg);
     transform: rotate(42deg);
-    }
+}
 
 .agree-link {
     color: #3CB878;
