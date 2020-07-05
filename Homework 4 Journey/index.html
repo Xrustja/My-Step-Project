@@ -9,28 +9,28 @@
 </head>
 <body>
 
-<div class="main-container">
-    <header class="header">
-        <h1 class="title">Journey</h1>
+<header class="header">
+    <h1 class="title">Journey</h1>
 
-        <div class="right-header">
-            <div class="icon-container">
-                <a class="icon-link icon1" href="#"></a>
-                <a class="icon-link icon2" href="#"></a>
-                <a class="icon-link icon3" href="#"></a>
+    <div class="right-header">
+        <div class="icon-container">
+            <a class="icon-link icon1" href="#"></a>
+            <a class="icon-link icon2" href="#"></a>
+            <a class="icon-link icon3" href="#"></a>
 
-            </div>
-            <div class="line"></div>
-            <div class="authorization-container">
-                <a class="authorization-link" href="#">Welcome,
-                    <span class="log-in">Log In</span>
-                </a>
-                <a class="authorization-link" href="#">or
-                    <span class="sign-up">Sign Up</span>
-                </a>
-            </div>
         </div>
-    </header>
+        <div class="line"></div>
+        <div class="authorization-container">
+            <a class="authorization-link" href="#">Welcome,
+                <span class="log-in">Log In</span>
+            </a>
+            <a class="authorization-link" href="#">or
+                <span class="sign-up">Sign Up</span>
+            </a>
+        </div>
+    </div>
+</header>
+<div class="main-container">
     <div class="form">
         <form>
             <div class="form-header">
@@ -40,14 +40,15 @@
             </div>
             <div class="social-btn-container">
                 <button class="social-btn">
-                    <i class="fab fa-facebook-f"></i><span class="btn-vertical-line"></span> <span
-                        class="social-btn-text">Facebook</span>
+                    <i class="fab fa-facebook-f"></i>
+                    <span class="btn-vertical-line"></span>
+                    <span class="social-btn-text">Facebook</span>
                 </button>
 
                 <button class="social-btn google-btn">
-                    <i class="fab fa-google-plus-g"></i> <span
-                        class="btn-vertical-line btn-vertical-line-google"></span> <span
-                        class="social-btn-text">Google</span>
+                    <i class="fab fa-google-plus-g"></i>
+                    <span class="btn-vertical-line btn-vertical-line-google"></span>
+                    <span class ="social-btn-text">Google</span>
                 </button>
             </div>
 
@@ -61,11 +62,14 @@
             <input type="email" class="name" placeholder="Email">
             <input type="password" class="name" placeholder="Choose Password">
             <input type="password" class="name" placeholder="Confirm Password">
-            <input type="checkbox" class="checkbox">
-            <a class="agree" href="#">Agree our <span class="agree2">Terms & Conditions</span></a>
+            <div class="checkbox-container">
+                <div class="checkbox-field">
+                    <input type="checkbox" class="checkbox" id="check" checked="checked"><label for="check"><span class="agree">Agree with our </span></label>
 
+                </div>
+                <a class="agree-link" href="#">Terms & Conditions</a>
+            </div>
             <input type="submit" class="submit" value="Create Account">
-
 
         </form>
     </div>
