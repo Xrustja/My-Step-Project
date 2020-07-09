@@ -1,0 +1,73 @@
+.table {
+    position: absolute;
+    width: 1192px;
+    /*height: 736px;*/
+    left: calc(50% - 1192px/2);
+    /*top: calc(50% - 736px/2);*/
+    border-top: 22px solid #3A4965;
+    border-bottom: 32px solid #3A4965;
+    border-left: 20px solid #3A4965;
+    border-right: 29px solid #3A4965;
+    font-family: Arimo, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 16px;
+    background: #E3E3E3;
+}
+.tr td{
+    width: 280px;
+    height: 73px;
+}
+
+tr:nth-child(odd) {
+    background: #F2F2F2;
+}
+.main-block-row {
+    height: 72px;
+}
+
+i{
+    margin-right: 4px;
+    color: #848484;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.button {
+    width: 195px;
+    height: 54px;
+    border-radius: 5px;
+    border-bottom: 9px solid rgba(0, 0, 0, 0.1);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    box-shadow: 0 1px #C4C4C4;
+    font-family: Arimo, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding-top: 9px;
+}
+.btn-gray {
+    background: #484848;
+}
+
+.btn-green {
+    background: #89C331;
+}
+
+.btn-red {
+    background: #F04A56;
+}
+.btn-dark-turquoise {
+    background: #20807C;
+}
+.tr-for-btn {
+    height: 109px;
+}
