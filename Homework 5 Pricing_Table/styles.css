@@ -2,7 +2,7 @@
     position: absolute;
     width: 1192px;
     /*height: 736px;*/
-    left: calc(50% - 1192px/2);
+    left: calc(50% - 1192px / 2);
     /*top: calc(50% - 736px/2);*/
     border-top: 22px solid #3A4965;
     border-bottom: 32px solid #3A4965;
@@ -14,20 +14,94 @@
     font-size: 16px;
     line-height: 16px;
     background: #E3E3E3;
-}
-.tr td{
+    color: #484848;
+    border-spacing: 0;
+    }
+
+.tr td {
     width: 280px;
     height: 73px;
+
 }
 
 tr:nth-child(odd) {
     background: #F2F2F2;
 }
+
 .main-block-row {
     height: 72px;
+    /*border-right: black;*/
+
+}
+.price-row {
+    height: 89px;
+
 }
 
-i{
+.h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    line-height: 28px;
+}
+.h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    line-height: 28px;
+    font-weight: bold;
+}
+.title {
+    background: #FAFAFA;
+}
+
+.offer-green {
+    background: #89C331;
+    height: 72px;
+
+}
+.offer-red {
+    background: #F04A56;
+    height: 72px;
+
+}
+.offer-dark-turquoise {
+    background: #20807C;
+    height: 72px;
+
+}
+
+.price-cell {
+    position: relative;
+    background: #FAFAFA;
+}
+.price-first-part {
+    position: absolute;
+    top: 26px;
+    left: 33px;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 28px;
+}
+.price-top-part {
+    position: absolute;
+    top: 11px;
+    left: 134px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.price-period {
+    position: absolute;
+    top: 33px;
+    left: 140px;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+
+i {
     margin-right: 4px;
     color: #848484;
     font-size: 24px;
@@ -54,6 +128,7 @@ i{
     color: #FFFFFF;
     padding-top: 9px;
 }
+
 .btn-gray {
     background: #484848;
 }
@@ -65,9 +140,11 @@ i{
 .btn-red {
     background: #F04A56;
 }
+
 .btn-dark-turquoise {
     background: #20807C;
 }
+
 .tr-for-btn {
     height: 109px;
 }
