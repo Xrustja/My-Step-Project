@@ -1,0 +1,147 @@
+.table {
+    width: 1197px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 28px solid #3A4965;
+    border-bottom: 21px solid #3A4965;
+    border-left: 27px solid #3A4965;
+    border-right: 27px solid #3A4965;
+    font-family: Arimo, sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+    background: #F2F2F2;
+    color: #484848;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.td:nth-child(even), .th:nth-child(even) {
+    background: #E3E3E3;
+}
+.th {
+    width: 13.6%;
+}
+
+.th:first-child {
+    width: 18.3%;
+}
+
+.header-options-row {
+    border-bottom: 12px solid #3A4965;
+}
+
+.td {
+    border-bottom: 1px solid #D7D7D7;
+    vertical-align: middle;
+    line-height: 28px;
+}
+
+.plan-title {
+    background: #FAFAFA;
+}
+
+.h2 {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 28px;
+    padding-top: 33px;
+}
+
+.h1 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 34px;
+}
+
+
+.plan-options {
+    font-family: FontAwesome, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.i {
+    color: #848484;
+    margin-bottom: 12px;
+}
+
+.price-options {
+    position: relative;
+    border-bottom: none;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    padding: 23px 18px;
+   }
+
+.price-first-part {
+    float: left;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 28px;
+    padding-top: 7px;
+    padding-bottom: 13px;
+}
+
+.price-top-part {
+    position: absolute;
+    top: 48px;
+    left: 58px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+
+}
+
+.price-period {
+    float: left;
+    font-size: 14px;
+    line-height: 28px;
+    padding-left: 30px;
+    padding-top: 7px;
+}
+
+
+
+.buy-button {
+    width: 147px;
+    padding-top: 16px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border-bottom: 9px solid rgba(0, 0, 0, 0.1);
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    font-family: Arimo, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    outline: none;
+    background: #414141;
+}
+.green-background {
+    background: #89C331;
+}
+.red-background {
+    background: #F04A56;
+}
+.dark-turquoise-background {
+    background: #20807C;
+}
+
+
