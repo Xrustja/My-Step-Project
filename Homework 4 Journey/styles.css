@@ -391,8 +391,8 @@ i {
     width: 324px;
     height: 46px;
     outline: none;
+    border: none;
     color: #FFFFFF;
-    border: 1px solid #F2F2F2;
     background: rgba(60, 184, 120, 0.8);
     border-radius: 4px;
     margin-top: 20px;
