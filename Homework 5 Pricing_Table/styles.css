@@ -1,7 +1,32 @@
+@font-face {
+    font-family: 'Arimo';
+    src: url('Fonts/Arimo-font/Arimo-Regular.eot');
+    src: url('Fonts/Arimo-font/Arimo-Regular.eot?#iefix') format('embedded-opentype'),
+    url('Fonts/Arimo-font/Arimo-Regular.woff2') format('woff2'),
+    url('Fonts/Arimo-font/Arimo-Regular.woff') format('woff'),
+    url('Fonts/Arimo-font/Arimo-Regular.ttf') format('truetype'),
+    url('Fonts/Arimo-font/Arimo-Regular.svg#Arimo-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('Fonts/Arimo-font/Arimo-Bold.eot');
+    src: url('Fonts/Arimo-font/Arimo-Bold.eot?#iefix') format('embedded-opentype'),
+    url('Fonts/Arimo-font/Arimo-Bold.woff2') format('woff2'),
+    url('Fonts/Arimo-font/Arimo-Bold.woff') format('woff'),
+    url('Fonts/Arimo-font/Arimo-Bold.ttf') format('truetype'),
+    url('Fonts/Arimo-font/Arimo-Bold.svg#Arimo-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
 .table {
     position: absolute;
     width: 1192px;
-    /*height: 736px;*/
     left: calc(50% - 1192px / 2);
     /*top: calc(50% - 736px/2);*/
     border-top: 22px solid #3A4965;
@@ -16,73 +41,103 @@
     background: #E3E3E3;
     color: #484848;
     border-spacing: 0;
-    }
+    border-collapse: separate;
+}
 
-.tr td {
-    width: 280px;
-    height: 73px;
+.th {
+    border-left: 1px solid #C9C9C9;
+    text-align: center;
+    vertical-align: middle;
+}
 
+.td {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border-left: 1px solid #C9C9C9;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.th:first-child {
+    width: 27.4%;
+}
+
+.td:first-child, .th:first-child {
+    border-left: none;
+}
+
+.offer-green, .offer-red, .offer-dark-turquoise, .title {
+    border-left: none;
+}
+
+.price-cell:first-child {
+    border-left: 1px solid #C9C9C9;
 }
 
 tr:nth-child(odd) {
     background: #F2F2F2;
 }
 
-.main-block-row {
-    height: 72px;
-    /*border-right: black;*/
-
-}
-.price-row {
-    height: 89px;
-
-}
-
 .h2 {
-    padding: 0;
+    padding-top: 51px;
     margin: 0;
     font-size: 18px;
     line-height: 28px;
 }
+
 .h1 {
-    padding: 0;
+    padding-bottom: 51px;
     margin: 0;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 28px;
     font-weight: bold;
 }
+
+.title-row {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+}
+
 .title {
     background: #FAFAFA;
+    color: #484848;
 }
 
 .offer-green {
     background: #89C331;
-    height: 72px;
-
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
+
 .offer-red {
     background: #F04A56;
-    height: 72px;
-
+    padding-bottom: 10px;
+    padding-top: 10px;
+    font-size: 30px;
 }
+
 .offer-dark-turquoise {
     background: #20807C;
-    height: 72px;
-
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .price-cell {
     position: relative;
     background: #FAFAFA;
 }
+
 .price-first-part {
     position: absolute;
-    top: 26px;
+    top: 38px;
     left: 33px;
     font-weight: bold;
     font-size: 60px;
     line-height: 28px;
 }
+
 .price-top-part {
     position: absolute;
     top: 11px;
@@ -100,17 +155,29 @@ tr:nth-child(odd) {
     line-height: 28px;
 }
 
-
-i {
+.i {
     margin-right: 4px;
     color: #848484;
     font-size: 24px;
     line-height: 28px;
 }
 
+.td-cont {
+    background: #DDDDDD;
+}
+
+.td-buy {
+    background: #F4F4F4;
+}
+
+.td-buy-red {
+    background: #EEEEEE;
+}
+
 .button {
     width: 195px;
-    height: 54px;
+    padding-top: 16px;
+    padding-bottom: 10px;
     border-radius: 5px;
     border-bottom: 9px solid rgba(0, 0, 0, 0.1);
     border-left: 0;
@@ -126,7 +193,7 @@ i {
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    padding-top: 9px;
+    outline: none
 }
 
 .btn-gray {
@@ -135,6 +202,7 @@ i {
 
 .btn-green {
     background: #89C331;
+
 }
 
 .btn-red {
@@ -146,5 +214,21 @@ i {
 }
 
 .tr-for-btn {
-    height: 109px;
+    height: 117px;
+}
+
+.btn-gray:hover {
+    background: radial-gradient(ellipse, #2d2e2d, #a39e9f);
+}
+
+.btn-green:hover {
+    background: radial-gradient(ellipse, #1c4523, #349945);
+}
+
+.btn-red:hover {
+    background: radial-gradient(ellipse, #a60c16, #d1212d);
+}
+
+.btn-dark-turquoise:hover {
+    background: radial-gradient(ellipse, #064539, #319482);
 }

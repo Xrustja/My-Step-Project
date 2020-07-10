@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Arimo';
+    src: url('Fonts/Arimo-font/Arimo-Regular.eot');
+    src: url('Fonts/Arimo-font/Arimo-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Fonts/Arimo-font/Arimo-Regular.woff2') format('woff2'),
+        url('Fonts/Arimo-font/Arimo-Regular.woff') format('woff'),
+        url('Fonts/Arimo-font/Arimo-Regular.ttf') format('truetype'),
+        url('Fonts/Arimo-font/Arimo-Regular.svg#Arimo-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('Fonts/Arimo-font/Arimo-Bold.eot');
+    src: url('Fonts/Arimo-font/Arimo-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Fonts/Arimo-font/Arimo-Bold.woff2') format('woff2'),
+        url('Fonts/Arimo-font/Arimo-Bold.woff') format('woff'),
+        url('Fonts/Arimo-font/Arimo-Bold.ttf') format('truetype'),
+        url('Fonts/Arimo-font/Arimo-Bold.svg#Arimo-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
