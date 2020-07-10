@@ -24,6 +24,7 @@
 .td:nth-child(even), .th:nth-child(even) {
     background: #E3E3E3;
 }
+
 .th {
     width: 13.6%;
 }
@@ -82,7 +83,7 @@
     line-height: 28px;
     color: #FFFFFF;
     padding: 23px 18px;
-   }
+}
 
 .price-first-part {
     float: left;
@@ -112,7 +113,6 @@
 }
 
 
-
 .buy-button {
     width: 147px;
     padding-top: 16px;
@@ -134,12 +134,15 @@
     outline: none;
     background: #414141;
 }
+
 .green-background {
     background: #89C331;
 }
+
 .red-background {
     background: #F04A56;
 }
+
 .dark-turquoise-background {
     background: #20807C;
 }
