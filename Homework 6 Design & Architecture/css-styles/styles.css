@@ -101,6 +101,12 @@
     margin-right: 0;
 }
 
+.most-popular-post-container {
+    background-color: #F2F2F2;
+    padding-bottom: 72px;
+    padding-top: 52px;
+}
+
 .main-block-titles {
     font-weight: bold;
     font-size: 27px;
@@ -108,16 +114,19 @@
     text-align: center;
     text-transform: uppercase;
     color: #18B4CF;
-    margin-top: 49px;
+    margin-bottom: 52px;
 }
-.popular-posts-container {
+
+.posts-container {
     display: flex;
     flex-flow: column wrap;
     height: 824px;
     width: 1170px;
     align-content: space-between;
     text-align: center;
+    margin: 0 auto;
 }
+
 .popular-post-item-title {
     margin-top: 20px;
     margin-bottom: 22px;
@@ -131,9 +140,17 @@
     /*width: 32%;*/
 }
 
-.popular-post-item:nth-child(3n+1) { order: 1; }
-.popular-post-item:nth-child(3n+2) { order: 2; }
-.popular-post-item:nth-child(3n)   { order: 3; }
+.popular-post-item:nth-child(3n+1) {
+    order: 1;
+}
+
+.popular-post-item:nth-child(3n+2) {
+    order: 2;
+}
+
+.popular-post-item:nth-child(3n) {
+    order: 3;
+}
 
 .popular-posts-container::before,
 .popular-posts-container::after {
@@ -142,4 +159,9 @@
     width: 0;
     order: 2;
 }
-
+.most-popular-clients-container {
+    height: 588px;
+    background-image: url("../Images/Backgrounds/html_css_homework_homework6_img_parallax-bg.jpeg");
+    background-position-y: -190px;
+    text-align: center;
+   }
