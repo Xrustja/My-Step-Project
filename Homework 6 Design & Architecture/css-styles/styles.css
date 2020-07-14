@@ -1,6 +1,7 @@
-.main-container {
+.container {
     font-family: Open Sans, sans-serif;
     font-style: normal;
+
 }
 
 .navigation-container {
@@ -68,6 +69,8 @@
 }
 
 .header-container {
+    display: flex;
+    flex-direction: column;
     height: 369px;
     background-image: url("../Images/Backgrounds/html_css_homework_homework6_img_header-bg.jpeg");
     background-position-y: -557px;
@@ -115,29 +118,33 @@
     text-transform: uppercase;
     color: #18B4CF;
     margin-bottom: 52px;
-}
+    }
 
 .posts-container {
     display: flex;
     flex-flow: column wrap;
-    height: 824px;
+    height: 870px;
     width: 1170px;
     align-content: space-between;
     text-align: center;
     margin: 0 auto;
 }
-
+.posts-container:last-child {
+    margin-bottom: 0;
+}
 .popular-post-item-title {
-    margin-top: 20px;
-    margin-bottom: 22px;
+    padding-top: 20px;
+    padding-bottom: 22px;
     font-weight: bold;
     font-size: 18px;
     line-height: 25px;
     text-align: center;
+    background: #FFFFFF;
+
 }
 
 .popular-post-item {
-    /*width: 32%;*/
+   margin-bottom: 30px;
 }
 
 .popular-post-item:nth-child(3n+1) {
@@ -159,9 +166,79 @@
     width: 0;
     order: 2;
 }
+
 .most-popular-clients-container {
     height: 588px;
     background-image: url("../Images/Backgrounds/html_css_homework_homework6_img_parallax-bg.jpeg");
     background-position-y: -190px;
     text-align: center;
-   }
+    padding-top: 106px;
+    padding-bottom: 192px;
+    box-sizing: border-box;
+    margin-bottom: 49px;
+}
+.most-popular-clients-title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 44px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 auto 86px;
+    border: 1px transparent;
+    box-sizing: border-box;
+
+}
+.line {
+    width: 60px;
+    height: 3px;
+    background: #18B4CF;
+    border: none;
+    text-align: center;
+}
+.clients-logo-container {
+    display: grid;
+    grid-template-columns:repeat(4,250px);
+    justify-content: center;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    margin-top: 107px;
+
+}
+.clients-logo-1 {
+  background-image: url('../Images/clients-logo/css_sprites-most-popular-clients.png');
+    width: 207px;
+    height: 28px;
+    background-position: -10px -10px;
+}
+.clients-logo-2 {
+    background-image: url('../Images/clients-logo/css_sprites-most-popular-clients.png');
+    width: 135px;
+    height: 49px;
+    background-position: -10px -58px;
+}
+.clients-logo-3 {
+    background-image: url('../Images/clients-logo/css_sprites-most-popular-clients.png');
+    width: 232px;
+    height: 51px;
+    background-position: -10px -127px;
+}
+.clients-logo-4 {
+    background-image: url('../Images/clients-logo/css_sprites-most-popular-clients.png');
+    width: 141px;
+    height: 52px;
+    background-position: -10px -198px;
+}
+.top-rated-foto-line {
+    display: grid;
+    grid-template-columns:repeat(7,271px);
+    justify-content: center;
+}
+.hot-news-container {
+    margin-top: 49px;
+    display: grid;
+
+}
+
+
