@@ -38,16 +38,14 @@ html,body {
     top: 199px;
     transform-origin: 50% 100%;
     animation: crawl 30s  infinite linear;
-    /*!*top: 1000px;*!*/
-    /*transform: rotateX(20deg) translateZ(0px);*/
 }
 
 .title {
     text-align: center;
     margin-bottom:100px;
 }
-.title:first-child {
-    margin-bottom:80px ;
+.title>p:first-child {
+    padding-bottom:130px ;
 }
 .text {
     margin-bottom: 100px;
