@@ -2,8 +2,8 @@ function createNewUser(first_name, last_name, birthday) {
     const birthDay = new Date(birthday);
     const yy = (birthDay.getFullYear());
     const yyNow = ((new Date).getFullYear());
-    const mm = (birthDay.getMonth());
-    const mmNow = ((new Date).getMonth());
+    const mm = (birthDay.getMonth()) + 1;
+    const mmNow = ((new Date).getMonth()) + 1;
     const dd = (birthDay.getDate());
     const ddNow = ((new Date).getDate());
 
@@ -15,10 +15,8 @@ function createNewUser(first_name, last_name, birthday) {
             return this.firstName.charAt(0).toLowerCase() + this.lastName.toLowerCase()
         },
         getAge: function () {
-            let age
-            if (mmNow > mm) {
-                age = yyNow - yy;
-            } else if (mmNow === mm && ddNow >= dd) {
+            let age;
+            if (mmNow > mm || (mmNow === mm && ddNow >= dd)) {
                 age = yyNow - yy;
             } else {
                 age = yyNow - yy - 1;
@@ -33,13 +31,10 @@ function createNewUser(first_name, last_name, birthday) {
 
 let firstName = prompt('Enter your first name');
 let secondName = prompt('Enter your second name');
-let birthday = prompt('Enter your date of birth dd.mm.yyyy');
+let birthday = prompt('Enter your date of birth mm.dd.yyyy');
 
 
 const user = createNewUser(firstName, secondName, birthday);
 console.log(user);
 console.log(`Your age : ${user.getAge()}`);
 console.log(`Your password : ${user.getPassword()}`);
-
-console.log(`Date of your birthday is ${birthday}`);
-console.log(`Your login : ${user.getLogin()}`);
