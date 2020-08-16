@@ -1,8 +1,8 @@
 let arr = ['hello', 'world', 'Kiev', 'Lviv', ['1', '2', '3', 'sea', 'user', 23]];
 
 function buildList(arr) {
-
-    return '<ul>' + arr.map((item) => Array.isArray(item) ? '<li>' + 'Element is array, contains value inside:' + buildList(item) + '</li>' : '<li>' + item + '</li>').join(' ') + '</ul>';
+    clearPage();
+    return  `<ul> ${arr.map((item) => Array.isArray(item)  ? `<li> Element is array, contains value inside: ${buildList(item)} </li>` : `<li> ${item} </li>`).join(' ')} </ul> `;
 }
 
 let rootEl = document.getElementById('arrToList');
@@ -12,6 +12,20 @@ rootEl.insertAdjacentHTML("afterbegin", buildList(arr));
 
 console.log(buildList(arr));
 
+function clearPage() {
+    let i = 10;
+    let timeLeft = setInterval(function () {
+        if (i <= 5) {
+            document.getElementById(`clearTime`).style.color = `red`;
+        }
+        document.getElementById(`clearTime`).innerHTML = i;
+        if (i === 0) {
+            clearInterval(timeLeft);
+            document.write(`Page has been cleared!!!`);
+        }
+        i--;
+    }, 1000);
+}
 
 
 
@@ -50,17 +64,4 @@ console.log(buildList(arr));
 // console.log(buildList(arr));
 
 //
-// function clearPage() {
-//     let i = 10;
-//     let timeLeft = setInterval(function () {
-//         if (i <= 5) {
-//             document.getElementById(`clearTime`).style.color = `red`;
-//         }
-//         document.getElementById(`clearTime`).innerHTML = i;
-//         if (i === 0) {
-//             clearInterval(timeLeft);
-//             document.write(`Page has been cleared!!!`);
-//         }
-//         i--;
-//     }, 1000);
-// }
+//
