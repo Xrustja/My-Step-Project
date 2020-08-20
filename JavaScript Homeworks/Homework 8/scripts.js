@@ -7,18 +7,16 @@ document.addEventListener('DOMContentLoaded', () => {
             let input = event.currentTarget;
             const filter = document.getElementsByTagName('span')[0];
             const errorMessage = document.getElementsByTagName('div')[0];
-
+            input.classList.remove('input-focus-border');
+            input.classList.toggle('input-focus-border');
+            input.value = '';
             if (filter) {
-                input.classList.remove('input-focus-border');
                 input.classList.remove('change-text-color-while-blur');
             }
             if (errorMessage) {
                 input.classList.remove('input-error-border');
-                input.classList.remove('input-focus-border');
                 errorMessage.remove();
             }
-            input.classList.toggle('input-focus-border');
-            input.value = '';
         }
 
         function lostFocus(event) {
@@ -34,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     filter.remove();
                     val = '';
                 });
-
                 filter.append(x);
             } else {
                 input.classList.toggle('input-error-border');
