@@ -25,26 +25,29 @@ document.addEventListener('DOMContentLoaded', () => {
             let input = event.currentTarget;
             let val = input.value;
             if (val > 0) {
-                let filter = document.createElement('span');
-                filter.classList.toggle('filter');
-                filter.innerHTML = `Текущая цена: $ ${val}`;
+                let filter = createHtmlData('span', `Текущая цена: $ ${val}`, 'filter');
                 input.closest('label').before(filter);
                 input.classList.toggle('change-text-color-while-blur');
                 console.log(`Your filter = ${filter}`);
-                let x = document.createElement("button");
+                let x = createHtmlData('button', `X`, 'close-field');
                 x.addEventListener('click', () => {
                     filter.remove();
-                    val = ''
+                    val = '';
                 });
-                x.classList.toggle('close-field');
-                x.innerText = 'X';
+
                 filter.append(x);
             } else {
                 input.classList.toggle('input-error-border');
-                let message = document.createElement('div');
-                message.innerHTML = `Please enter correct price!!!`;
+                let message = createHtmlData('div', `Please enter correct price!!!`);
                 input.closest('label').after(message);
             }
+        }
+
+        function createHtmlData(tag, text, className) {
+            let newBlock = document.createElement(tag);
+            newBlock.innerHTML = `${text}`;
+            newBlock.classList.toggle(className);
+            return newBlock;
         }
     }
 );
