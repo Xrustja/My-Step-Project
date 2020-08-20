@@ -5,19 +5,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         function getFocused(event) {
             let input = event.currentTarget;
-            input.classList.toggle('input-focus-border');
             const filter = document.getElementsByTagName('span')[0];
-            if (filter) {
-                input.classList.toggle('input-focus-border');
-                input.classList.toggle('change-text-color-while-blur');
-                filter.remove();
-            }
             const errorMessage = document.getElementsByTagName('div')[0];
+
+            if (filter) {
+                input.classList.remove('input-focus-border');
+                input.classList.remove('change-text-color-while-blur');
+            }
             if (errorMessage) {
-                input.classList.toggle('input-error-border');
-                input.classList.toggle('input-focus-border');
+                input.classList.remove('input-error-border');
+                input.classList.remove('input-focus-border');
                 errorMessage.remove();
             }
+            input.classList.toggle('input-focus-border');
             input.value = '';
         }
 
