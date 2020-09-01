@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+body {
+    width: 1280px;
+    margin: auto;
+}
+
+.menu {
+    padding-left: 330px;
+}
+
+.menu a {
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: #89CA62;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    align-items: center;
+    letter-spacing: 2.7px;
+    margin-top: 25.5px;
+    padding-right: 72px;
+}
+
+.padding-exception a {
+    padding-right: 50px;
+}
+
+.picture {
+    margin-top: 25.5px;
+    width: 1280px;
+
+}
+.img {
+    border: 5px white solid;
+    box-sizing: border-box;
+}
+
+.text {
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 2.4px;
+    line-height: 26px;
+    margin-top: 49px;
+    color: #FFFFFF;
+}
+
+h2 {
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+p {
+    margin-top: 28px;
+    padding-left: 67.5px;
+    padding-right: 67.5px;
+}
+
+button {
+    width: 191px;
+    height: 51px;
+    left: 544.5px;
+    top: 557px;
+    background: #89CA62;
+    border-radius: 4px;
+    margin-top: 66px;
+    border:none;
+    color: #FFFFFF;
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    align-items: center;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+footer {
+    font-family: Montserrat, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    align-items: center;
+    letter-spacing: 2.4px;
+    color: #FFFFFF;
+    margin-top: 82px;
+    padding-left: 713px;
+    margin-bottom: 29px;
+}
+#change-mode-btn {
+    position: absolute;
+    top: -65px;
+    left: 0;
+    background-color: #89CA62;
+    width: 75px;
+    height: 30px;
+}
