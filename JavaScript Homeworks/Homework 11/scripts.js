@@ -4,11 +4,13 @@ document.addEventListener('keypress', (event) => {
     let btn = document.querySelectorAll('button.btn');
 
     btn.forEach(btn => {
-        if (btn.innerHTML === code) {
-            btn.classList.add('highlight');
-        } else {
-            btn.classList.remove('highlight');
-        }
+        setInterval(() => {
+            if (btn.innerHTML === code) {
+                btn.classList.add('highlight');
+            } else {
+                btn.classList.remove('highlight');
+            }
+        })
     });
 });
 
