@@ -18,40 +18,38 @@
             justify-content: space-between;
             margin: 0 auto;
         }
-        .hidden {
-            visibility: hidden;
-            opacity: 0;
-        }
+
         .btn {
             margin-top: 420px;
         }
-        .firstImgVisibility {
-            visibility: visible;
-        }
-
-        .fadeOut {
+        .hidden {
             visibility: hidden;
             opacity: 0;
             -webkit-transition: visibility 0s 2s, opacity 1s linear;
         }
-        .fadeIn {
+        .visible {
             visibility: visible;
             opacity: 1;
             -webkit-transition: visibility 2s, opacity 1s linear;
         }
-
+        .timer {
+        position: absolute;
+            top: 200px;
+            left: 450px;
+        }
     </style>
+
 </head>
 <body>
 <div class="images-wrapper">
-    <img src="./img/1.jpg" alt="image of game" class="image-to-show hidden" />
+    <img src="./img/1.jpg" alt="image of game" class="image-to-show visible" />
     <img src="./img/2.jpg" alt="image of game" class="image-to-show hidden" />
     <img src="./img/3.JPG" alt="image of game" class="image-to-show hidden" />
     <img src="./img/4.png" alt="image of game" class="image-to-show hidden" />
 </div>
 <button id="stop-btn" class="btn">Прекратить</button>
 <button disabled id="continue-btn" class="btn">Возобновить просмотр</button>
-
+<p class="timer"> New picture in: <span id="clearTime">10</span></p>
 <script src="scripts.js"></script>
 </body>
 </html>

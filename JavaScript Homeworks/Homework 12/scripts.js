@@ -2,27 +2,18 @@ document.addEventListener('DOMContentLoaded', onReady);
 
 function onReady() {
     let img = document.querySelectorAll('img');
-    console.log(`Before funCall =  ${img}`);
-    changeImg(img);
-
+    let i = 1;
+    changeImg(img, i);
+    timer();
 }
 
-function changeImg(img) {
-    let i = 1;
+
+function changeImg(img, i) {
     let Interval = setInterval(() => {
-        // console.log('i new iteration =', i);
-        img.forEach(el => el.classList.remove('fadeOut', 'fadeIn'));
-        if (i === 0) {
-            img[img.length-1].classList.add('fadeOut');
-        } else {
-            img[i - 1].classList.add('fadeOut');
-        }
-        img[i].classList.add('fadeIn');
-        // console.log('i=', i);
-        // console.log('i-1=', i - 1);
+        img.forEach(el => el.classList.remove('visible'));
+        img[i].classList.add('visible');
         i < img.length - 1 ? i++ : i = 0;
-        // console.log('i after check= ', i);
-    }, 2000);
+    }, 10000);
 
     const stopBtn = document.getElementById('stop-btn');
     stopBtn.onclick = function () {
@@ -32,9 +23,20 @@ function changeImg(img) {
 
     const continueBtn = document.getElementById('continue-btn');
     continueBtn.onclick = function () {
-        changeImg(img);
+        changeImg(img, i);
         continueBtn.disabled = true;
     };
+}
 
+function timer() {
+
+    let sec = 9;
+    setInterval(function () {
+        if (sec === 0) {
+            sec = 10;
+        }
+        document.getElementById(`clearTime`).innerHTML = sec;
+        sec--;
+    }, 1000);
 }
 
