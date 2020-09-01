@@ -3,40 +3,44 @@ document.addEventListener('DOMContentLoaded', onReady);
 function onReady() {
     let img = document.querySelectorAll('img');
     let i = 1;
-    changeImg(img, i);
-    timer();
-}
+    let sec = 2;
 
 
-function changeImg(img, i) {
-    let Interval = setInterval(() => {
-        img.forEach(el => el.classList.remove('visible'));
-        img[i].classList.add('visible');
-        i < img.length - 1 ? i++ : i = 0;
-    }, 10000);
+    let imgInterval = setInterval(changeImg, 3000);
+    let timerInterval = setInterval(timer, 1000);
 
     const stopBtn = document.getElementById('stop-btn');
     stopBtn.onclick = function () {
-        clearInterval(Interval);
+        clearInterval(imgInterval);
+        clearInterval(timerInterval);
         continueBtn.disabled = false;
     };
 
     const continueBtn = document.getElementById('continue-btn');
     continueBtn.onclick = function () {
-        changeImg(img, i);
+        document.getElementById(`clearTime`).innerHTML = '3';
+        sec = 2;
+        timerInterval = setInterval(timer, 1000);
+        imgInterval = setInterval(changeImg, 3000);
         continueBtn.disabled = true;
     };
-}
 
-function timer() {
+    function changeImg() {
+        console.log('start i = ', i);
+        img.forEach(el => el.classList.remove('visible'));
+        img[i].classList.add('visible');
+        console.log('Length = ', img.length);
+        i < img.length - 1 ? i++ : i = 0;
+        console.log('End i = ', i);
+    }
 
-    let sec = 9;
-    setInterval(function () {
+    function timer() {
         if (sec === 0) {
-            sec = 10;
+            sec = 3;
         }
         document.getElementById(`clearTime`).innerHTML = sec;
         sec--;
-    }, 1000);
+
+    }
 }
 
