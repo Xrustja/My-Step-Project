@@ -281,10 +281,12 @@ a {
 .purchase-container-background {
 
     background-attachment: fixed;
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;*/
     background-size: 100%;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../Images/Step Project Ham/Sections background/section-2.jpg");
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),no-repeat, url("../Images/Step Project Ham/Sections background/section-2.jpg");
     background-position-y: -430px;
+    background-size: 100%;
+
 }
 .purchase-container{
     text-align: center;
