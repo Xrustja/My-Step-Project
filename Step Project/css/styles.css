@@ -1,0 +1,205 @@
+.main-container {
+    width: 100%;
+    font-family: Montserrat, sans-serif;
+    font-weight: normal;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    width: 1160px;
+    margin: 0 auto;
+}
+
+.nav-container-background {
+    background-image: url("../Images/Step Project Ham/Sections background/section-1(header).jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 8px;
+}
+
+.navigation-container {
+    background-color: rgba(94, 93, 88, 0.6);
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 16px;
+    padding: 26px 0;
+}
+
+.logo-and-letter {
+    display: flex
+}
+
+.logo-letter {
+    position: relative;
+    left: -45px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 31px;
+    align-self: center;
+}
+
+.logo-text {
+    align-self: center;
+    margin-left: -25px;
+    font-size: 32px;
+}
+
+.turquoise-text-color {
+    color: #18CFAB;
+    font-weight: bold;
+}
+
+.navbar-container {
+    align-self: center;
+}
+
+.navbar-menu-list {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-menu-list-item {
+    margin-right: 21px;
+}
+
+.navbar-menu-list-item:last-child {
+    margin-right: 0;
+}
+
+.navbar-menu-list-link {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-menu-list-link:hover {
+    color: #18CFAB;
+    cursor: pointer;
+}
+
+.header-container {
+    padding-top: 260px;
+    padding-bottom: 240px;
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+}
+
+.header-title {
+    margin-bottom: 22px;
+}
+
+.header-large-p {
+    font-size: 78px;
+    margin-bottom: 22px;
+}
+
+.header-small-p {
+    text-transform: capitalize;
+    font-weight: normal;
+    font-size: 34px;
+    color: #D4D4D4;
+    margin-bottom: 130px;
+}
+
+.button {
+    padding: 16px;
+    margin-right: 26px;
+    background: #18CFAB;
+    font-size: 15px;
+    line-height: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.button:last-child {
+    background: #00CBF6;;
+    margin-right: 0;
+}
+
+.button:hover {
+    color: black;
+    background: radial-gradient(ellipse, #6fd4e8, #1873a8);
+}
+
+.options-container {
+    display: flex;
+    width: 100%;
+}
+
+.options-container-block {
+    display: flex;
+    flex-direction: column;
+    background-color: #1C2A33;
+    color: #18CFAB;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 85px 0 110px 0;
+    flex: auto;
+    align-items: center;
+}
+
+.options-container-block:nth-child(even) {
+    background-color: #18CFAB;;
+    color: #FFFFFF;
+    padding-top: 85px
+}
+
+.options-container-block:nth-child(odd) img {
+    padding-bottom: 47px;
+}
+
+.options-container-block:nth-child(even) img {
+    padding-bottom: 62px;
+}
+
+.our-services-container {
+    padding: 83px 0 91px;
+}
+
+.header2 {
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: capitalize;
+    color: #4E4E4E;
+    text-align: center;
+}
+
+.header2::after {
+    margin-top: 24px;
+    display: block;
+    position: absolute;
+    left: 48%;
+    width: 79px;
+    height: 5px;
+    content: "";
+    color: #18CFAB;
+    border-top: 1px #18CFAB solid;
+    border-bottom: 1px #18CFAB solid;
+    box-sizing: border-box;
+    transform: skewX(-45deg);
+}
+
+
+
+
+
