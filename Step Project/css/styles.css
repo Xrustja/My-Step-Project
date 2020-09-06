@@ -87,6 +87,8 @@ a {
 .navbar-menu-list-link:hover {
     color: #18CFAB;
     cursor: pointer;
+    padding-bottom: 48px;
+    border-bottom: 2px #18CFAB solid;
 }
 
 .header-container {
@@ -382,12 +384,24 @@ a {
     animation: loadingA 1.5s 0s infinite;
 }
 
+@keyframes loadingA {
+0% {
+    height: 15px;
+}
+50% {
+    height: 35px;
+}
+100% {
+    height: 15px;
+}
+}
+
 /*анимация подгрузки конец*/
-.hover-container:hover .amazing-work-img {
+.two-images-container:hover .amazing-work-img-border {
     display: none;
 }
 
-.hover-container:hover .amazing-work-img-flip-side {
+.two-images-container:hover .amazing-work-img-flip-side {
     display: flex;
 }
 
