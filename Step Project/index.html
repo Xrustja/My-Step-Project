@@ -7,7 +7,7 @@
     <script src="https://kit.fontawesome.com/862af42408.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="main-container">
@@ -41,7 +41,7 @@
             <p class="header-small-p">Just Buy And Enjoy These Awesome Features</p>
             <div>
                 <input type="button" class="button" value="explore now">
-                <input type="button" class="button" value="purchase now">
+                <input type="button" class="button second-btn" value="purchase now">
             </div>
         </header>
     </div>
@@ -61,19 +61,19 @@
         <a class="options-container-block" href="#">
             <img src="Images/Step%20Project%20Ham/logo/devices.png" alt="devices">
             <p>responsive all device</p>
-        </a>zwd
+        </a>
     </div>
     <div class="container our-services-container">
         <h2 class="header2">Our Services</h2>
-        <ul class="our-services-tabs">
-            <li class="our-services-tabs-title">Web Design</li>
-            <li class="our-services-tabs-title">Graphic Design</li>
-            <li class="our-services-tabs-title">Online Support</li>
-            <li class="our-services-tabs-title">App Design</li>
-            <li class="our-services-tabs-title">Online Marketing</li>
-            <li class="our-services-tabs-title">Seo Service</li>
+        <ul class="tabs">
+            <li class="tabs-title our-services active">Web Design</li>
+            <li class="tabs-title our-services">Graphic Design</li>
+            <li class="tabs-title our-services">Online Support</li>
+            <li class="tabs-title our-services">App Design</li>
+            <li class="tabs-title our-services">Online Marketing</li>
+            <li class="tabs-title our-services">Seo Service</li>
         </ul>
-        <div class="our-service-content-container">
+        <div class="our-service-content-container active">
             <img class="our-service-content-img" src="Images/Step%20Project%20Ham/our%20service/web%20design.png"
                  alt="Web Design">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium corporis distinctio dolorem illo
@@ -137,20 +137,358 @@
     <div class="purchase-container-background">
         <div class="purchase-container container">
             <h2 class="purchase-header2">Everything is ready. just buy and install now</h2>
-            <p>Smooth reliable, responsive ready, perfect portfolio, unique blog layout and many many options for you</p>
+            <p>Smooth reliable, responsive ready, perfect portfolio, unique blog layout and many many options for
+                you</p>
             <input type="button" class="button" value="purchase now">
         </div>
     </div>
-    <div class="container our-services-container">
-        <h2 class="header2">Our Services</h2>
-        <ul class="our-services-tabs">
-            <li class="our-services-tabs-title">All</li>
-            <li class="our-services-tabs-title">Graphic Design</li>
-            <li class="our-services-tabs-title">Web Design</li>
-            <li class="our-services-tabs-title">Landing Pages</li>
-            <li class="our-services-tabs-title">Wordpress</li>
-        </ul>
+    <div class="our-services-background">
+        <div class="container our-services-container amazing-work-container">
+            <h2 class="header2">Our Services</h2>
+            <ul class="tabs amazing-work-tabs">
+                <li class="tabs-title amazing-work-tabs-title" data-type="all">All</li>
+                <li class="tabs-title amazing-work-tabs-title" data-type="graphic-design">Graphic Design</li>
+                <li class="tabs-title amazing-work-tabs-title" data-type="web-design">Web Design</li>
+                <li class="tabs-title amazing-work-tabs-title" data-type="landing-pages">Landing Pages</li>
+                <li class="tabs-title amazing-work-tabs-title" data-type="wordpress">Wordpress</li>
+            </ul>
+            <div class="amazing-work-img-container">
+                <div class="two-images-container" data-type="graphic-design">
+                    <img class="amazing-work-img-border"
+                         src="Images/Step%20Project%20Ham/graphic%20design/graphic-design1.jpg" alt="Graphic Design">
+                    <div class="amazing-work-img-flip-side">
+                        <img src="Images/Step%20Project%20Ham/logo/icon.png" alt="icon">
+                        <p class="flip-side-title">creative design</p>
+                        <p class="flip-side-type-name">Graphic Design</p>
+                    </div>
+                </div>
+                <div class="two-images-container" data-type="wordpress">
+                    <img class="amazing-work-img-border"
+                         src="Images/Step%20Project%20Ham/wordpress/wordpress2.jpg"
+                         alt="Wordpress">
+                    <div class="amazing-work-img-flip-side">
+                        <img src="Images/Step%20Project%20Ham/logo/icon.png" alt="icon">
+                        <p class="flip-side-title">creative design</p>
+                        <p class="flip-side-type-name">Wordpress</p>
+                    </div>
+                </div>
+                <div class="two-images-container" data-type="web-design">
+                    <img class="amazing-work-img-border"
+                         src="Images/Step%20Project%20Ham/web%20design/web-design1.jpg"
+                         alt="Web Design">
+                    <div class="amazing-work-img-flip-side">
+                        <img src="Images/Step%20Project%20Ham/logo/icon.png" alt="icon">
+                        <p class="flip-side-title">creative design</p>
+                        <p class="flip-side-type-name">Web Design</p>
+                    </div>
+                </div>
+                <div class="two-images-container" data-type="graphic-design">
+                    <img class="amazing-work-img-border"
+                         src="Images/Step%20Project%20Ham/graphic%20design/graphic-design2.jpg" alt="Graphic Design">
+                    <div class="amazing-work-img-flip-side">
+                        <img src="Images/Step%20Project%20Ham/logo/icon.png" alt="icon">
+                        <p class="flip-side-title">creative design</p>
+                        <p class="flip-side-type-name">Graphic Design</p>
+                    </div>
+                </div>
+                <div class="two-images-container" data-type="landing-pages">
+                    <img src="Images/Step%20Project%20Ham/landing%20page/landing-page1.jpg" alt="Landing Pages">
+                    <div class="amazing-work-img-flip-side">
+                        <img src="Images/Step%20Project%20Ham/logo/icon.png" alt="icon">
+                        <p class="flip-side-title">creative design</p>
+                        <p class="flip-side-type-name">Landing Pages</p>
+                    </div>
+                </div>
+                <div class="two-images-container" data-type="graphic-design">
+                    <img src="Images/Step%20Project%20Ham/graphic%20design/graphic-design3.jpg" alt="Graphic Design">
+                    <div class="amazing-work-img-flip-side">
+                        <img src="Images/Step%20Project%20Ham/logo/icon.png" alt="icon">
+                        <p class="flip-side-title">creative design</p>
+                        <p class="flip-side-type-name">Graphic Design</p>
+                    </div>
+                </div>
+                <div class="two-images-container" data-type="web-design">
+                    <img src="Images/Step%20Project%20Ham/web%20design/web-design5.jpg"
+                         alt="Web Design">
+                    <div class="amazing-work-img-flip-side">
+                        <img src="Images/Step%20Project%20Ham/logo/icon.png" alt="icon">
+                        <p class="flip-side-title">creative design</p>
+                        <p class="flip-side-type-name">Web Design</p>
+                    </div>
+                </div>
+                <div class="two-images-container" data-type="landing-pages">
+                    <img src="Images/Step%20Project%20Ham/landing%20page/landing-page5.jpg"
+                         alt="Landing Pages">
+                    <div class="amazing-work-img-flip-side">
+                        <img src="Images/Step%20Project%20Ham/logo/icon.png" alt="icon">
+                        <p class="flip-side-title">creative design</p>
+                        <p class="flip-side-type-name">Landing Pages</p>
+                    </div>
+                </div>
+                <div class="two-images-container" data-type="wordpress">
+                    <img src="Images/Step%20Project%20Ham/wordpress/wordpress3.jpg"
+                         alt="Wordpress">
+                    <div class="amazing-work-img-flip-side">
+                        <img src="Images/Step%20Project%20Ham/logo/icon.png" alt="icon">
+                        <p class="flip-side-title">creative design</p>
+                        <p class="flip-side-type-name">Wordpress</p>
+                    </div>
+                </div>
+                <div class="two-images-container" data-type="graphic-design">
+                    <img src="Images/Step%20Project%20Ham/graphic%20design/graphic-design4.jpg" alt="Graphic Design">
+                    <div class="amazing-work-img-flip-side">
+                        <img src="Images/Step%20Project%20Ham/logo/icon.png" alt="icon">
+                        <p class="flip-side-title">creative design</p>
+                        <p class="flip-side-type-name">Graphic Design</p>
+                    </div>
+                </div>
+                <div class="two-images-container" data-type="landing-pages">
+                    <img src="Images/Step%20Project%20Ham/landing%20page/landing-page3.jpg"
+                         alt="Landing Pages">
+                    <div class="amazing-work-img-flip-side">
+                        <img src="Images/Step%20Project%20Ham/logo/icon.png" alt="icon">
+                        <p class="flip-side-title">creative design</p>
+                        <p class="flip-side-type-name">Landing Pages</p>
+                    </div>
+                </div>
+                <div class="two-images-container" data-type="graphic-design">
+                    <img src="Images/Step%20Project%20Ham/graphic%20design/graphic-design6.jpg" alt="Graphic Design">
+                    <div class="amazing-work-img-flip-side">
+                        <img src="Images/Step%20Project%20Ham/logo/icon.png" alt="icon">
+                        <p class="flip-side-title">creative design</p>
+                        <p class="flip-side-type-name">Graphic Design</p>
+                    </div>
+                </div>
+                <div class="loading">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <!--            <div class="amazing-work-img-container next">-->
+            <!--                <img class="amazing-work-img web-design" src="Images/Step%20Project%20Ham/web%20design/web-design2.jpg"-->
+            <!--                     alt="Web Design">-->
+            <!--                <img class="amazing-work-img wordpress" src="Images/Step%20Project%20Ham/wordpress/wordpress1.jpg"-->
+            <!--                     alt="Wordpress">-->
+            <!--                <img class="amazing-work-img web-design" src="Images/Step%20Project%20Ham/web%20design/web-design6.jpg"-->
+            <!--                     alt="Web Design">-->
+            <!--                <img class="amazing-work-img landing-pages"-->
+            <!--                     src="Images/Step%20Project%20Ham/landing%20page/landing-page2.jpg" alt="Landing Pages">-->
+            <!--                <img class="amazing-work-img wordpress" src="Images/Step%20Project%20Ham/wordpress/wordpress4.jpg"-->
+            <!--                     alt="Wordpress">-->
+            <!--                <img class="amazing-work-img landing-pages"-->
+            <!--                     src="Images/Step%20Project%20Ham/landing%20page/landing-page4.jpg" alt="Landing Pages">-->
+            <!--                <img class="amazing-work-img web-design" src="Images/Step%20Project%20Ham/web%20design/web-design4.jpg"-->
+            <!--                     alt="Web Design">-->
+            <!--                <img class="amazing-work-img landing-pages"-->
+            <!--                     src="Images/Step%20Project%20Ham/landing%20page/landing-page6.jpg" alt="Landing Pages">-->
+            <!--                <img class="amazing-work-img wordpress" src="Images/Step%20Project%20Ham/wordpress/wordpress6.jpg"-->
+            <!--                     alt="Wordpress">-->
+            <!--                <img class="amazing-work-img graphic-design"-->
+            <!--                     src="Images/Step%20Project%20Ham/graphic%20design/graphic-design5.jpg" alt="Graphic Design">-->
+            <!--                <img class="amazing-work-img wordpress" src="Images/Step%20Project%20Ham/wordpress/wordpress5.jpg"-->
+            <!--                     alt="Wordpress">-->
+            <!--                <img class="amazing-work-img web-design" src="Images/Step%20Project%20Ham/web%20design/web-design3.jpg"-->
+            <!--                     alt="Web Design">-->
+            <!--            </div>-->
+            <input type="button" class="button load-btn" value="+ Load More">
+
+        </div>
+    </div>
+    <div class="container breaking-news-container">
+        <h2 class="header2">Breaking News</h2>
+        <div class="breaking-news-posts-container">
+            <div class="breaking-news-single-post-container">
+                <a href="#">
+                    <img class="breaking-news-img"
+                         src="Images/Step%20Project%20Ham/breaking%20news/breaking-news1.png"
+                         alt="Breaking News 1">
+                    <div class="date-block"><span>12</span><span>Feb</span></div>
+                    <p class="amazing-work-block-title">Amazing Blog Post</p>
+                    <p class="amazing-work-additional-info">By admin | 2 comment</p>
+                </a>
+            </div>
+            <div class="breaking-news-single-post-container">
+                <a href="#">
+                    <img class="breaking-news-img"
+                         src="Images/Step%20Project%20Ham/breaking%20news/breaking-news2.png"
+                         alt="Breaking News 2">
+                    <div class="date-block"><span>12</span><span>Feb</span></div>
+                    <p class="amazing-work-block-title">Amazing Blog Post</p>
+                    <p class="amazing-work-additional-info">By admin | 2 comment</p>
+                </a>
+            </div>
+            <div class="breaking-news-single-post-container">
+                <a href="#">
+                    <img class="breaking-news-img"
+                         src="Images/Step%20Project%20Ham/breaking%20news/breaking-news3.png"
+                         alt="Breaking News 3">
+                    <div class="date-block"><span>12</span><span>Feb</span></div>
+                    <p class="amazing-work-block-title">Amazing Blog Post</p>
+                    <p class="amazing-work-additional-info">By admin | 2 comment</p>
+                </a>
+            </div>
+            <div class="breaking-news-single-post-container">
+                <a href="#">
+                    <img class="breaking-news-img"
+                         src="Images/Step%20Project%20Ham/breaking%20news/breaking-news4.png"
+                         alt="Breaking News 4">
+                    <div class="date-block"><span>12</span><span>Feb</span></div>
+                    <p class="amazing-work-block-title">Amazing Blog Post</p>
+                    <p class="amazing-work-additional-info">By admin | 2 comment</p>
+                </a>
+            </div>
+            <div class="breaking-news-single-post-container">
+                <a href="#">
+                    <img class="breaking-news-img"
+                         src="Images/Step%20Project%20Ham/breaking%20news/breaking-news5.png"
+                         alt="Breaking News 5">
+                    <div class="date-block"><span>12</span><span>Feb</span></div>
+                    <p class="amazing-work-block-title">Amazing Blog Post</p>
+                    <p class="amazing-work-additional-info">By admin | 2 comment</p>
+                </a>
+            </div>
+            <div class="breaking-news-single-post-container">
+                <a href="#">
+                    <img class="breaking-news-img"
+                         src="Images/Step%20Project%20Ham/breaking%20news/breaking-news6.png"
+                         alt="Breaking News 6">
+
+                    <div class="date-block"><span>12</span><span>Feb</span></div>
+                    <p class="amazing-work-block-title">Amazing Blog Post</p>
+                    <p class="amazing-work-additional-info">By admin | 2 comment</p>
+                </a>
+            </div>
+            <div class="breaking-news-single-post-container">
+                <a href="#"></a><img class="breaking-news-img"
+                                     src="Images/Step%20Project%20Ham/breaking%20news/breaking-news7.png"
+                                     alt="Breaking News 7">
+
+                <div class="date-block"><span>12</span><span>Feb</span></div>
+                <p class="amazing-work-block-title">Amazing Blog Post</p>
+                <p class="amazing-work-additional-info">By admin | 2 comment</p>
+                </a>
+            </div>
+            <div class="breaking-news-single-post-container">
+                <a href="#">
+                    <img class="breaking-news-img"
+                         src="Images/Step%20Project%20Ham/breaking%20news/breaking-news8.png"
+                         alt="Breaking News 8">
+                    <div class="date-block"><span>12</span><span>Feb</span></div>
+                    <p class="amazing-work-block-title">Amazing Blog Post</p>
+                    <p class="amazing-work-additional-info">By admin | 2 comment</p>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div class="reviews-background">
+        <div class="container reviews-container ">
+            <h2 class="header2 reviews-header2">What People Say About <span class="lowercase">the</span>Ham</h2>
+            <img class="reviews-shapes" src="Images/Step%20Project%20Ham/logo/Shapes.png" alt="Shapes">
+
+            <div class="reviewer-profile">
+                <p class="reviews-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci
+                    alias
+                    corporis, dignissimos dolor, eos facere nobis officia placeat quaerat quas qui ratione recusandae
+                    sequi tempore ullam vero!
+                    Accusantium assumenda aut commodi, cumque cupiditate dolores ducimus.
+                </p>
+                <p class="reviewer-name">Kate Limanova</p>
+                <p class="reviewer-position">UI Designer</p>
+                <img class="reviewer-foto-big" src="Images/Step%20Project%20Ham/reviewers/1%20Kate.png"
+                     alt="Kate">
+            </div>
+            <div class="reviewer-profile hidden">
+                <p class="reviews-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci
+                    alias
+                    corporis, dignissimos dolor, eos facere nobis officia placeat quaerat quas qui ratione recusandae
+                    sequi tempore ullam vero!
+                    Accusantium assumenda aut commodi, cumque cupiditate dolores ducimus.
+                </p>
+                <p class="reviewer-name">Tom Peterson</p>
+                <p class="reviewer-position">Web Developer</p>
+                <img class="reviewer-foto-big" src="Images/Step%20Project%20Ham/reviewers/2%20Tom.png"
+                     alt="Hasan Ali">
+            </div>
+            <div class="reviewer-profile hidden">
+                <p class="reviews-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci
+                    alias
+                    corporis, dignissimos dolor, eos facere nobis officia placeat quaerat quas qui ratione recusandae
+                    sequi tempore ullam vero!
+                    Accusantium assumenda aut commodi, cumque cupiditate dolores ducimus.
+                </p>
+                <p class="reviewer-name">Hasan Ali</p>
+                <p class="reviewer-position">UX Designer</p>
+                <img class="reviewer-foto-big" src="Images/Step%20Project%20Ham/reviewers/3%20Hasan-Ali.png"
+                     alt="Hasan Ali">
+            </div>
+            <div class="reviewer-profile hidden">
+                <p class="reviews-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci
+                    alias
+                    corporis, dignissimos dolor, eos facere nobis officia placeat quaerat quas qui ratione recusandae
+                    sequi tempore ullam vero!
+                    Accusantium assumenda aut commodi, cumque cupiditate dolores ducimus.
+                </p>
+                <p class="reviewer-name">Sarah Mickailson</p>
+                <p class="reviewer-position">Frontend Developer</p>
+                <img class="reviewer-foto-big" src="Images/Step%20Project%20Ham/reviewers/4.%20Sarah.png"
+                     alt="Sarah">
+            </div>
+            <div class="reviewer-profile hidden">
+                <p class="reviews-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci
+                    alias
+                    corporis, dignissimos dolor, eos facere nobis officia placeat quaerat quas qui ratione recusandae
+                    sequi tempore ullam vero!
+                    Accusantium assumenda aut commodi, cumque cupiditate dolores ducimus.
+                </p>
+                <p class="reviewer-name">Mike Nilson</p>
+                <p class="reviewer-position">UX Designer</p>
+                <img class="reviewer-foto-big" src="Images/Step%20Project%20Ham/reviewers/5.%20Mike.png"
+                     alt="Mike">
+            </div>
+            <div class="scroll-block-authors">
+                <div class="square left">
+                    <i class="fas fa-angle-left fa-angle"></i>
+                </div>
+                <div class="slider">
+                    <div class="reviewer-foto" data-people="Kate">
+                        <img class="image-author" src="Images/Step%20Project%20Ham/reviewers/1%20Kate.png" alt="Kate">
+                    </div>
+                    <div class="reviewer-foto" data-people="Tom">
+                        <img class="image-author" src="Images/Step%20Project%20Ham/reviewers/2%20Tom.png" alt="Tom">
+                    </div>
+                    <div class="reviewer-foto" data-people="Hasan">
+                        <img class="image-author" src="Images/Step%20Project%20Ham/reviewers/3%20Hasan-Ali.png"
+                             alt="Hasan-Ali">
+                    </div>
+                    <div class="reviewer-foto" data-people="Sarah">
+                        <img class="image-author" src="Images/Step%20Project%20Ham/reviewers/4.%20Sarah.png"
+                             alt="Sarah">
+                    </div>
+                    <div class="reviewer-foto hidden" data-people="Mike">
+                        <img class="image-author" src="Images/Step%20Project%20Ham/reviewers/5.%20Mike.png"
+                             alt="sirius-black">
+                    </div>
+                </div>
+                <div class="square right">
+                    <i class="fas fa-angle-right fa-angle"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer-background">
+        <div class="footer-container container">
+            <p class="copyright-rights">
+                &copy; Copyright 2015
+                <span class="logo-ham-footer"> theHam </span>
+                | All Rights Reserved</p>
+        </div>
+    </div>
 </div>
 <script src="scripts.js"></script>
 </body>
 </html>
+
