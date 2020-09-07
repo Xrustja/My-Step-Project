@@ -494,6 +494,10 @@ a {
     text-align: center;
 }
 
+.reviewer-quote-container {
+    height: 530px;
+}
+
 .lowercase {
     text-transform: lowercase;
 }
@@ -504,6 +508,10 @@ a {
     line-height: 30px;
     color: #BBBBBB;
     margin: 36px 0;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .reviewer-name {
@@ -528,15 +536,15 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 44px;
 }
 
 .reviewer-photo {
     border: 6px solid rgba(31, 218, 181, 0.2);
     border-radius: 50%;
     width: 60px;
-   }
-.reviewer-small-photo-container{
+}
+
+.reviewer-small-photo-container {
     margin-right: 38px;
     display: flex;
     justify-content: center;
@@ -549,11 +557,13 @@ a {
     width: 134px;
     height: 134px;
 }
+
 .circle-border-small {
     border: 1px solid #18cfab;
     border-radius: 50%;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
+
 .square {
     display: flex;
     justify-content: center;
@@ -573,7 +583,6 @@ a {
     background-color: #18cfab;
     cursor: pointer;
     border: none;
-
 }
 
 
@@ -588,7 +597,6 @@ a {
     color: #AEAEAE;
     text-align: center;
     padding: 48px 0;
-
 }
 
 .logo-ham-footer {

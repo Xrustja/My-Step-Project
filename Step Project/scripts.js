@@ -95,20 +95,23 @@ $(document).ready(function () {
 
 //  ------  Slider  ------
 
+    $('.left').on('click', moveLeft);
+
+    $('.right').on('click', moveRight);
+
+
     function moveLeft() {
         const smallImages = $('.reviewer-small-photo-container');
         const currentImage = $('.reviewer-small-photo-container.circle-border-small');
         const currentImageIndex = currentImage.index();
-        console.log('currentImag', smallImages.length - 1);
-        // let prevImageIndex = currentImageIndex - 1;
+        const reviewerProfile = $('.reviewer-profile');
         let prevImageIndex;
+
         if (currentImageIndex === 0) {
             prevImageIndex = smallImages.length - 1
         } else {
             prevImageIndex = currentImageIndex - 1;
         }
-        console.log('prevImageIndex', prevImageIndex);
-
         let prevImage = smallImages.eq(prevImageIndex);
         if (currentImageIndex === ($('.reviewer-small-photo-container:visible:first').index())) {
             smallImages.eq(prevImageIndex).removeClass('hidden');
@@ -116,17 +119,61 @@ $(document).ready(function () {
         }
         if ((currentImageIndex) === ($('.reviewer-small-photo-container:first').index())) {
             $('.reviewer-small-photo-container.hidden').removeClass('hidden');
-            prevImage = $('.reviewer-small-photo-container:last');
+          prevImage = $('.reviewer-small-photo-container:last');
             currentImage.addClass('hidden');
         }
         currentImage.removeClass('circle-border-small');
         prevImage.addClass('circle-border-small');
-        // for (let input of bigPeopleBlock) {
-        //     if ($(input).data('people') === $('.mini-circle-photo.mini-circle-border').data('people')) {
-        //         $(input).fadeIn(700);
-        //     }
+        $.when(reviewerProfile.eq(currentImageIndex).fadeOut(300)).then (function (){
+        reviewerProfile.eq(prevImageIndex).fadeIn(300)})
     }
 
-    $('.left').on('click', moveLeft);
+    function moveRight() {
+        const smallImages = $('.reviewer-small-photo-container');
+        const currentImage = $('.reviewer-small-photo-container.circle-border-small');
+        const currentImageIndex = currentImage.index();
+        const reviewerProfile = $('.reviewer-profile');
+        let nextImageIndex;
+        if (currentImageIndex === smallImages.length - 1) {
+            nextImageIndex = 0
+        } else {
+            nextImageIndex = currentImageIndex + 1;
+        }
+        let nextImage = smallImages.eq(nextImageIndex);
+        if (currentImageIndex === ($('.reviewer-small-photo-container:visible:last').index())) {
+            smallImages.eq(nextImageIndex).removeClass('hidden');
+            smallImages.eq(currentImageIndex - 3).addClass('hidden');
+        }
+        if ((currentImageIndex) === ($('.reviewer-small-photo-container:last').index())) {
+            $('.reviewer-small-photo-container.hidden').removeClass('hidden');
+            nextImage = $('.reviewer-small-photo-container:first');
+            currentImage.addClass('hidden');
+        }
+        currentImage.removeClass('circle-border-small');
+        nextImage.addClass('circle-border-small');
+        $.when(reviewerProfile.eq(currentImageIndex).fadeOut(300)).then (function (){
+            reviewerProfile.eq(nextImageIndex).fadeIn(300)})
+    }
 
-});
+
+    //     let nextImage = $('.mini-circle-photo').eq(nextImageIndex);
+    //     const bigPeopleBlock = $('.authors-main-block');
+    //
+    //     $(bigPeopleBlock).hide();
+    //     if (currentImageIndex === ($('.mini-circle-photo:visible:last').index())) {
+    //         $('.mini-circle-photo').eq(nextImageIndex).show();
+    //         $('.mini-circle-photo').eq(currentImageIndex - 3).hide();
+    //     }
+    //     if ((currentImageIndex) === ($('.mini-circle-photo:last').index())) {
+    //         $('.mini-circle-photo:hidden').show();
+    //         nextImage = $('.mini-circle-photo').eq(0);
+    //         currentImage.hide();
+    //     }
+    //
+    //     currentImage.removeClass('mini-circle-border');
+    //     nextImage.addClass('mini-circle-border');
+    //     for (let input of bigPeopleBlock) {
+    //         if ($(input).data('people') === $('.mini-circle-photo.mini-circle-border').data('people')) {
+    //             $(input).fadeIn(700);
+    //
+            });
