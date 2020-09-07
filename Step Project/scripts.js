@@ -6,7 +6,7 @@ $(document).ready(function () {
     let activeText = $("div.our-service-content-container.active");
 
     $.each(tabs, function (index, tab) {
-        $(tab).click(function () {
+        $(tab).on('click', function () {
             if (activeTab.length) {
                 activeTab.toggleClass("active");
                 $(this).toggleClass("active");
@@ -21,7 +21,7 @@ $(document).ready(function () {
     });
 
     let tbsFilter = $('li.amazing-work-tabs-title');
-    tbsFilter.click(function (event) {
+    tbsFilter.on('click', function (event) {
             tbsFilter.removeClass('amazing-work-tabs-title-border');
             let targetTab = $(event.target);
             let imageBlock = $('div.two-images-container');
@@ -68,15 +68,22 @@ $(document).ready(function () {
         }
     }
 
-    $("#amazing-work-btn").click(function () {
-        shuffle(images);
-        for (let i = 0; i < 12; i++) {
-            let image = images[i];
-            let src = image.img;
-            let type = image.type;
-            console.log(type);
-            console.log(src);
-            let newImageBlock = `<div class="two-images-container" data-type="${type}">
+    let counter = 0;
+    $("#amazing-work-btn").on('click', function () {
+        counter++;
+        if (counter === 2) {
+            $("#amazing-work-btn").addClass("hidden");
+        }
+        $("div.loading").removeClass("hidden");
+        setTimeout(function () {
+            shuffle(images);
+            for (let i = 0; i < 12; i++) {
+                let image = images[i];
+                let src = image.img;
+                let type = image.type;
+                console.log(type);
+                console.log(src);
+                let newImageBlock = `<div class="two-images-container" data-type="${type}">
                     <img class="amazing-work-img-border"
                             src="${src}" alt="Graphic Design">
                     <div class="amazing-work-img-flip-side">
@@ -85,22 +92,29 @@ $(document).ready(function () {
                         <p class="flip-side-type-name">${type}</p>
                     </div>
                 </div>`;
-            console.log(newImageBlock);
-            let containerForAdd = document.querySelector('.amazing-work-img-container');
-            containerForAdd.insertAdjacentHTML("beforeend", newImageBlock);
-            $("li.amazing-work-tabs-title-border").click();
-        }
-        $("#amazing-work-btn").addClass("hidden");
+                console.log(newImageBlock);
+                let containerForAdd = document.querySelector('.amazing-work-img-container');
+                containerForAdd.insertAdjacentHTML("beforeend", newImageBlock);
+                $("li.amazing-work-tabs-title-border").click();
+                $("div.loading").addClass("hidden");
+            }
+        }, 2000);
+
+
     });
+
 
 //  ------  Slider  ------
 
-    $('.left').on('click', moveLeft);
+$('.left').on('click', moveLeft);
 
-    $('.right').on('click', moveRight);
+$('.right').on('click', moveRight);
 
+let doubleClickCheck = true;
 
-    function moveLeft() {
+function moveLeft() {
+    if (doubleClickCheck) {
+        doubleClickCheck = false;
         const smallImages = $('.reviewer-small-photo-container');
         const currentImage = $('.reviewer-small-photo-container.circle-border-small');
         const currentImageIndex = currentImage.index();
@@ -115,20 +129,26 @@ $(document).ready(function () {
         let prevImage = smallImages.eq(prevImageIndex);
         if (currentImageIndex === ($('.reviewer-small-photo-container:visible:first').index())) {
             smallImages.eq(prevImageIndex).removeClass('hidden');
+            smallImages.eq(currentImageIndex + 4).addClass('hidden');
             smallImages.eq(currentImageIndex + 3).addClass('hidden');
         }
         if ((currentImageIndex) === ($('.reviewer-small-photo-container:first').index())) {
             $('.reviewer-small-photo-container.hidden').removeClass('hidden');
-          prevImage = $('.reviewer-small-photo-container:last');
+            prevImage = $('.reviewer-small-photo-container:last');
             currentImage.addClass('hidden');
         }
         currentImage.removeClass('circle-border-small');
         prevImage.addClass('circle-border-small');
-        $.when(reviewerProfile.eq(currentImageIndex).fadeOut(300)).then (function (){
-        reviewerProfile.eq(prevImageIndex).fadeIn(300)})
+        $.when(reviewerProfile.eq(currentImageIndex).fadeOut(300)).then(function () {
+            reviewerProfile.eq(prevImageIndex).fadeIn(300);
+            doubleClickCheck = true;
+        });
     }
+}
 
-    function moveRight() {
+function moveRight() {
+    if (doubleClickCheck) {
+        doubleClickCheck = false;
         const smallImages = $('.reviewer-small-photo-container');
         const currentImage = $('.reviewer-small-photo-container.circle-border-small');
         const currentImageIndex = currentImage.index();
@@ -142,7 +162,8 @@ $(document).ready(function () {
         let nextImage = smallImages.eq(nextImageIndex);
         if (currentImageIndex === ($('.reviewer-small-photo-container:visible:last').index())) {
             smallImages.eq(nextImageIndex).removeClass('hidden');
-            smallImages.eq(currentImageIndex - 3).addClass('hidden');
+            // smallImages.eq(currentImageIndex - 3).addClass('hidden');
+            // smallImages.eq(currentImageIndex - 4).addClass('hidden');
         }
         if ((currentImageIndex) === ($('.reviewer-small-photo-container:last').index())) {
             $('.reviewer-small-photo-container.hidden').removeClass('hidden');
@@ -151,29 +172,33 @@ $(document).ready(function () {
         }
         currentImage.removeClass('circle-border-small');
         nextImage.addClass('circle-border-small');
-        $.when(reviewerProfile.eq(currentImageIndex).fadeOut(300)).then (function (){
-            reviewerProfile.eq(nextImageIndex).fadeIn(300)})
+        $.when(reviewerProfile.eq(currentImageIndex).fadeOut(300)).then(function () {
+            reviewerProfile.eq(nextImageIndex).fadeIn(300);
+            doubleClickCheck = true;
+        });
     }
+}
 
 
-    //     let nextImage = $('.mini-circle-photo').eq(nextImageIndex);
-    //     const bigPeopleBlock = $('.authors-main-block');
-    //
-    //     $(bigPeopleBlock).hide();
-    //     if (currentImageIndex === ($('.mini-circle-photo:visible:last').index())) {
-    //         $('.mini-circle-photo').eq(nextImageIndex).show();
-    //         $('.mini-circle-photo').eq(currentImageIndex - 3).hide();
-    //     }
-    //     if ((currentImageIndex) === ($('.mini-circle-photo:last').index())) {
-    //         $('.mini-circle-photo:hidden').show();
-    //         nextImage = $('.mini-circle-photo').eq(0);
-    //         currentImage.hide();
-    //     }
-    //
-    //     currentImage.removeClass('mini-circle-border');
-    //     nextImage.addClass('mini-circle-border');
-    //     for (let input of bigPeopleBlock) {
-    //         if ($(input).data('people') === $('.mini-circle-photo.mini-circle-border').data('people')) {
-    //             $(input).fadeIn(700);
-    //
+const smallImages = $('div.reviewer-small-photo-container');
+// let activeSmallImages = $('div.reviewer-small-photo-container.circle-border-small');
+$.each(smallImages, function (index, img) {
+    $(img).on('click', function () {
+        if (doubleClickCheck) {
+            doubleClickCheck = false;
+            let activeSmallImages = $('div.reviewer-small-photo-container.circle-border-small');
+            // if (activeSmallImages.length) {
+            activeSmallImages.removeClass("circle-border-small");
+            $(img).addClass("circle-border-small");
+
+            $.when($('div.reviewer-profile').fadeOut(300)).then(function () {
+                $('div.reviewer-profile').eq(index).fadeIn(300)
             });
+            doubleClickCheck = true;
+        }
+
+    });
+
+});
+})
+;
