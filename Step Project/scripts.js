@@ -44,9 +44,9 @@ $(document).ready(function () {
         {img: "Images/Step Project Ham/graphic design/graphic-design8.jpg", type: "graphic-design"},
         {img: "Images/Step Project Ham/graphic design/graphic-design9.jpg", type: "graphic-design"},
         {img: "Images/Step Project Ham/graphic design/graphic-design10.jpg", type: "graphic-design"},
-        {img: "Images/Step Project Ham/graphic design/graphic-design11.jpg", type: "graphic-design"},
         {img: "Images/Step Project Ham/graphic design/graphic-design12.jpg", type: "graphic-design"},
-        {img: "Images/Step Project Ham/landing page/landing-page5.jpg", type: "landing-pages"},
+        {img: "Images/Step Project Ham/landing page/landing-page4.jpg", type: "landing-pages"},
+        {img: "Images/Step Project Ham/landing page/landing-page2.jpg", type: "landing-pages"},
         {img: "Images/Step Project Ham/landing page/landing-page6.jpg", type: "landing-pages"},
         {img: "Images/Step Project Ham/landing page/landing-page7.jpg", type: "landing-pages"},
         {img: "Images/Step Project Ham/wordpress/wordpress5.jpg", type: "wordpress"},
@@ -56,7 +56,7 @@ $(document).ready(function () {
         {img: "Images/Step Project Ham/wordpress/wordpress9.jpg", type: "wordpress"},
         {img: "Images/Step Project Ham/wordpress/wordpress10.jpg", type: "wordpress"},
         {img: "Images/Step Project Ham/web design/web-design4.jpg", type: "web-design"},
-        {img: "Images/Step Project Ham/web design/web-design5.jpg", type: "web-design"},
+        {img: "Images/Step Project Ham/web design/web-design2.jpg", type: "web-design"},
         {img: "Images/Step Project Ham/web design/web-design6.jpg", type: "web-design"},
         {img: "Images/Step Project Ham/web design/web-design7.jpg", type: "web-design"}];
 
@@ -88,11 +88,45 @@ $(document).ready(function () {
             console.log(newImageBlock);
             let containerForAdd = document.querySelector('.amazing-work-img-container');
             containerForAdd.insertAdjacentHTML("beforeend", newImageBlock);
-        $("li.amazing-work-tabs-title-border").click();
+            $("li.amazing-work-tabs-title-border").click();
         }
         $("#amazing-work-btn").addClass("hidden");
+    });
 
-    })
+//  ------  Slider  ------
 
+    function moveLeft() {
+        const smallImages = $('.reviewer-small-photo-container');
+        const currentImage = $('.reviewer-small-photo-container.circle-border-small');
+        const currentImageIndex = currentImage.index();
+        console.log('currentImag', smallImages.length - 1);
+        // let prevImageIndex = currentImageIndex - 1;
+        let prevImageIndex;
+        if (currentImageIndex === 0) {
+            prevImageIndex = smallImages.length - 1
+        } else {
+            prevImageIndex = currentImageIndex - 1;
+        }
+        console.log('prevImageIndex', prevImageIndex);
+
+        let prevImage = smallImages.eq(prevImageIndex);
+        if (currentImageIndex === ($('.reviewer-small-photo-container:visible:first').index())) {
+            smallImages.eq(prevImageIndex).removeClass('hidden');
+            smallImages.eq(currentImageIndex + 3).addClass('hidden');
+        }
+        if ((currentImageIndex) === ($('.reviewer-small-photo-container:first').index())) {
+            $('.reviewer-small-photo-container.hidden').removeClass('hidden');
+            prevImage = $('.reviewer-small-photo-container:last');
+            currentImage.addClass('hidden');
+        }
+        currentImage.removeClass('circle-border-small');
+        prevImage.addClass('circle-border-small');
+        // for (let input of bigPeopleBlock) {
+        //     if ($(input).data('people') === $('.mini-circle-photo.mini-circle-border').data('people')) {
+        //         $(input).fadeIn(700);
+        //     }
+    }
+
+    $('.left').on('click', moveLeft);
 
 });

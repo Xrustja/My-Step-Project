@@ -235,7 +235,7 @@ a {
 
 .tabs-title.our-services:hover {
     border: 2px solid #18CFAB;
-    position: relative;
+    cursor: pointer;
 }
 
 .our-service-content-container {
@@ -317,6 +317,7 @@ a {
     background: #E9EDEF;
     padding: 15px;
     flex: inherit;
+    cursor: pointer;
 }
 
 .amazing-work-tabs-title:first-child {
@@ -336,6 +337,7 @@ a {
 
 .amazing-work-tabs-title-border {
     border: 2px #18CFAB solid;
+    color: #18CFAB;
 }
 
 .amazing-work-img-flip-side {
@@ -385,15 +387,15 @@ a {
 }
 
 @keyframes loadingA {
-0% {
-    height: 15px;
-}
-50% {
-    height: 35px;
-}
-100% {
-    height: 15px;
-}
+    0% {
+        height: 15px;
+    }
+    50% {
+        height: 35px;
+    }
+    100% {
+        height: 15px;
+    }
 }
 
 /*анимация подгрузки конец*/
@@ -522,18 +524,36 @@ a {
     display: flex;
 }
 
-.scroll-block-authors {
+.scroll-block-reviewers {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 44px;
 }
 
-.image-author {
+.reviewer-photo {
+    border: 6px solid rgba(31, 218, 181, 0.2);
+    border-radius: 50%;
     width: 60px;
+   }
+.reviewer-small-photo-container{
     margin-right: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.reviewer-photo-big {
+    border: 12px solid rgba(31, 218, 181, 0.2);
+    border-radius: 50%;
+    width: 134px;
+    height: 134px;
+}
+.circle-border-small {
+    border: 1px solid #18cfab;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
 .square {
     display: flex;
     justify-content: center;
@@ -575,12 +595,6 @@ a {
     color: #18CFAB;
 }
 
-.reviewer-foto-big {
-    border: 12px solid rgba(31, 218, 181, 0.2);
-    border-radius: 50%;
-    width: 134px;
-    height: 134px;
-}
 
 .hidden {
     display: none;
