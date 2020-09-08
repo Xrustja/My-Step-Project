@@ -74,7 +74,7 @@ $(document).ready(function () {
         if (counter === 2) {
             $("#amazing-work-btn").addClass("hidden");
         }
-        $("div.loading").removeClass("hidden");
+        $("div.loading.amazing-work").removeClass("hidden");
         setTimeout(function () {
             shuffle(images);
             for (let i = 0; i < 12; i++) {
@@ -96,7 +96,7 @@ $(document).ready(function () {
                 let containerForAdd = document.querySelector('.amazing-work-img-container');
                 containerForAdd.insertAdjacentHTML("beforeend", newImageBlock);
                 $("li.amazing-work-tabs-title-border").click();
-                $("div.loading").addClass("hidden");
+                $("div.loading.amazing-work").addClass("hidden");
             }
         }, 2000);
 
@@ -200,18 +200,58 @@ $(document).ready(function () {
         });
 
     });
-    $('.grid').masonry({
 
+// -----Masonry ----
+
+    $('.load-more').hide();
+
+    $('.grid').masonry({
         itemSelector: '.grid-item',
         columnWidth: '.grid-item',
         gutter: 20,
-        // reize: false
     });
-//     $('.grid-2').masonry({
-//
-//         itemSelector: 'width3',
-//         columnWidth: 50 ,
-//         gutter: 20,
-//         // reize: false
-//     });
-})
+
+    $('.grid-2').masonry({
+        itemSelector: '.grid-item2',
+        columnWidth: '.grid-item2',
+        gutter: 4,
+    });
+
+
+});
+let counter = 0;
+$("#best-images-btn").on('click', function () {
+    counter++;
+    if (counter === 2) {
+        $("#best-images-btn").addClass("hidden");
+    }
+    $("div.loading.best-images").removeClass("hidden");
+    setTimeout(function () {
+        let i;
+        let j;
+        if (counter === 1) {
+            i = 0;
+            j = 2;
+        }
+        if (counter === 2) {
+            i = 3;
+            j = 5;
+        }
+        for (i; i <= j; i++) {
+            let newImg = $('.grid-item.load-more');
+            $(newImg).eq(i).show();
+            $("div.loading.best-images").addClass("hidden");
+            $('.grid').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-item',
+                gutter: 20,
+            });
+            $('.grid-2').masonry({
+                itemSelector: '.grid-item2',
+                columnWidth: '.grid-item2',
+                gutter: 4,
+            });
+        }
+    }, 2000);
+
+});
