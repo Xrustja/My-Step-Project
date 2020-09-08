@@ -604,7 +604,24 @@ a {
     color: #18CFAB;
 }
 
-
 .hidden {
     display: none;
+}
+.gallery-of-best-images-container {
+    padding-top: 108px ;
+}
+
+.grid-item {
+    margin-bottom: 20px;
+    /*width:30%;*/
+}
+/*.width2 { width: 10%; }*/
+/*.width3 { width: 5%; }*/
+
+.width-img-small{
+   width: 100px;
+
+}
+.middle-img-size {
+    width: 125px;
 }

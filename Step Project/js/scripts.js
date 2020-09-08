@@ -87,7 +87,7 @@ $(document).ready(function () {
                     <img class="amazing-work-img-border"
                             src="${src}" alt="Graphic Design">
                     <div class="amazing-work-img-flip-side">
-                        <img src="Images/Step%20Project%20Ham/logo/icon.png" alt="icon">
+                        <img src="../Images/Step%20Project%20Ham/logo/icon.png" alt="icon">
                         <p class="flip-side-title">creative design</p>
                         <p class="flip-side-type-name">${type}</p>
                     </div>
@@ -106,99 +106,112 @@ $(document).ready(function () {
 
 //  ------  Slider  ------
 
-$('.left').on('click', moveLeft);
+    $('.left').on('click', moveLeft);
 
-$('.right').on('click', moveRight);
+    $('.right').on('click', moveRight);
 
-let doubleClickCheck = true;
+    let doubleClickCheck = true;
 
-function moveLeft() {
-    if (doubleClickCheck) {
-        doubleClickCheck = false;
-        const smallImages = $('.reviewer-small-photo-container');
-        const currentImage = $('.reviewer-small-photo-container.circle-border-small');
-        const currentImageIndex = currentImage.index();
-        const reviewerProfile = $('.reviewer-profile');
-        let prevImageIndex;
-
-        if (currentImageIndex === 0) {
-            prevImageIndex = smallImages.length - 1
-        } else {
-            prevImageIndex = currentImageIndex - 1;
-        }
-        let prevImage = smallImages.eq(prevImageIndex);
-        if (currentImageIndex === ($('.reviewer-small-photo-container:visible:first').index())) {
-            smallImages.eq(prevImageIndex).removeClass('hidden');
-            smallImages.eq(currentImageIndex + 4).addClass('hidden');
-            smallImages.eq(currentImageIndex + 3).addClass('hidden');
-        }
-        if ((currentImageIndex) === ($('.reviewer-small-photo-container:first').index())) {
-            $('.reviewer-small-photo-container.hidden').removeClass('hidden');
-            prevImage = $('.reviewer-small-photo-container:last');
-            currentImage.addClass('hidden');
-        }
-        currentImage.removeClass('circle-border-small');
-        prevImage.addClass('circle-border-small');
-        $.when(reviewerProfile.eq(currentImageIndex).fadeOut(300)).then(function () {
-            reviewerProfile.eq(prevImageIndex).fadeIn(300);
-            doubleClickCheck = true;
-        });
-    }
-}
-
-function moveRight() {
-    if (doubleClickCheck) {
-        doubleClickCheck = false;
-        const smallImages = $('.reviewer-small-photo-container');
-        const currentImage = $('.reviewer-small-photo-container.circle-border-small');
-        const currentImageIndex = currentImage.index();
-        const reviewerProfile = $('.reviewer-profile');
-        let nextImageIndex;
-        if (currentImageIndex === smallImages.length - 1) {
-            nextImageIndex = 0
-        } else {
-            nextImageIndex = currentImageIndex + 1;
-        }
-        let nextImage = smallImages.eq(nextImageIndex);
-        if (currentImageIndex === ($('.reviewer-small-photo-container:visible:last').index())) {
-            smallImages.eq(nextImageIndex).removeClass('hidden');
-            // smallImages.eq(currentImageIndex - 3).addClass('hidden');
-            // smallImages.eq(currentImageIndex - 4).addClass('hidden');
-        }
-        if ((currentImageIndex) === ($('.reviewer-small-photo-container:last').index())) {
-            $('.reviewer-small-photo-container.hidden').removeClass('hidden');
-            nextImage = $('.reviewer-small-photo-container:first');
-            currentImage.addClass('hidden');
-        }
-        currentImage.removeClass('circle-border-small');
-        nextImage.addClass('circle-border-small');
-        $.when(reviewerProfile.eq(currentImageIndex).fadeOut(300)).then(function () {
-            reviewerProfile.eq(nextImageIndex).fadeIn(300);
-            doubleClickCheck = true;
-        });
-    }
-}
-
-
-const smallImages = $('div.reviewer-small-photo-container');
-// let activeSmallImages = $('div.reviewer-small-photo-container.circle-border-small');
-$.each(smallImages, function (index, img) {
-    $(img).on('click', function () {
+    function moveLeft() {
         if (doubleClickCheck) {
             doubleClickCheck = false;
-            let activeSmallImages = $('div.reviewer-small-photo-container.circle-border-small');
-            // if (activeSmallImages.length) {
-            activeSmallImages.removeClass("circle-border-small");
-            $(img).addClass("circle-border-small");
+            const smallImages = $('.reviewer-small-photo-container');
+            const currentImage = $('.reviewer-small-photo-container.circle-border-small');
+            const currentImageIndex = currentImage.index();
+            const reviewerProfile = $('.reviewer-profile');
+            let prevImageIndex;
 
-            $.when($('div.reviewer-profile').fadeOut(300)).then(function () {
-                $('div.reviewer-profile').eq(index).fadeIn(300)
+            if (currentImageIndex === 0) {
+                prevImageIndex = smallImages.length - 1
+            } else {
+                prevImageIndex = currentImageIndex - 1;
+            }
+            let prevImage = smallImages.eq(prevImageIndex);
+            if (currentImageIndex === ($('.reviewer-small-photo-container:visible:first').index())) {
+                smallImages.eq(prevImageIndex).removeClass('hidden');
+                // smallImages.eq(currentImageIndex + 4).addClass('hidden');
+                smallImages.eq(currentImageIndex + 3).addClass('hidden');
+            }
+            if ((currentImageIndex) === ($('.reviewer-small-photo-container:first').index())) {
+                $('.reviewer-small-photo-container.hidden').removeClass('hidden');
+                prevImage = $('.reviewer-small-photo-container:last');
+                currentImage.addClass('hidden');
+            }
+            currentImage.removeClass('circle-border-small');
+            prevImage.addClass('circle-border-small');
+            $.when(reviewerProfile.eq(currentImageIndex).fadeOut(300)).then(function () {
+                reviewerProfile.eq(prevImageIndex).fadeIn(300);
+                doubleClickCheck = true;
             });
-            doubleClickCheck = true;
         }
+    }
+
+    function moveRight() {
+        if (doubleClickCheck) {
+            doubleClickCheck = false;
+            const smallImages = $('.reviewer-small-photo-container');
+            const currentImage = $('.reviewer-small-photo-container.circle-border-small');
+            const currentImageIndex = currentImage.index();
+            const reviewerProfile = $('.reviewer-profile');
+            let nextImageIndex;
+            if (currentImageIndex === smallImages.length - 1) {
+                nextImageIndex = 0
+            } else {
+                nextImageIndex = currentImageIndex + 1;
+            }
+            let nextImage = smallImages.eq(nextImageIndex);
+            if (currentImageIndex === ($('.reviewer-small-photo-container:visible:last').index())) {
+                smallImages.eq(nextImageIndex).removeClass('hidden');
+                smallImages.eq(currentImageIndex - 3).addClass('hidden');
+                // smallImages.eq(currentImageIndex - 4).addClass('hidden');
+            }
+            if ((currentImageIndex) === ($('.reviewer-small-photo-container:last').index())) {
+                $('.reviewer-small-photo-container.hidden').removeClass('hidden');
+                nextImage = $('.reviewer-small-photo-container:first');
+                currentImage.addClass('hidden');
+            }
+            currentImage.removeClass('circle-border-small');
+            nextImage.addClass('circle-border-small');
+            $.when(reviewerProfile.eq(currentImageIndex).fadeOut(300)).then(function () {
+                reviewerProfile.eq(nextImageIndex).fadeIn(300);
+                doubleClickCheck = true;
+            });
+        }
+    }
+
+
+    const smallImages = $('div.reviewer-small-photo-container');
+// let activeSmallImages = $('div.reviewer-small-photo-container.circle-border-small');
+    $.each(smallImages, function (index, img) {
+        $(img).on('click', function () {
+            if (doubleClickCheck) {
+                doubleClickCheck = false;
+                let activeSmallImages = $('div.reviewer-small-photo-container.circle-border-small');
+                // if (activeSmallImages.length) {
+                activeSmallImages.removeClass("circle-border-small");
+                $(img).addClass("circle-border-small");
+
+                $.when($('div.reviewer-profile').fadeOut(300)).then(function () {
+                    $('div.reviewer-profile').eq(index).fadeIn(300)
+                });
+                doubleClickCheck = true;
+            }
+
+        });
 
     });
+    $('.grid').masonry({
 
-});
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-item',
+        gutter: 20,
+        // reize: false
+    });
+//     $('.grid-2').masonry({
+//
+//         itemSelector: 'width3',
+//         columnWidth: 50 ,
+//         gutter: 20,
+//         // reize: false
+//     });
 })
-;
