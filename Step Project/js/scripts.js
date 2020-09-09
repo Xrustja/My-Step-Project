@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    /*   ----- Our Services switch-----  */
+
     let tabs = $("li.tabs-title");
     let text = $("div.our-service-content-container");
     let activeTab = $("li.tabs-title.active");
@@ -20,6 +22,8 @@ $(document).ready(function () {
         })
     });
 
+    /*   ----- Our Amazing Work filter-----  */
+
     let tbsFilter = $('li.amazing-work-tabs-title');
     tbsFilter.on('click', function (event) {
             tbsFilter.removeClass('amazing-work-tabs-title-border');
@@ -39,6 +43,7 @@ $(document).ready(function () {
         }
     );
 
+    /*   ----- Our Amazing Work load more button-----  */
 
     let images = [{img: "Images/Step Project Ham/graphic design/graphic-design7.jpg", type: "graphic-design"},
         {img: "Images/Step Project Ham/graphic design/graphic-design8.jpg", type: "graphic-design"},
@@ -103,11 +108,9 @@ $(document).ready(function () {
 
     });
 
-
-//  ------  Slider  ------
+    /*   ----- What People Say Slider -----  */
 
     $('.left').on('click', moveLeft);
-
     $('.right').on('click', moveRight);
 
     let doubleClickCheck = true;
@@ -129,7 +132,6 @@ $(document).ready(function () {
             let prevImage = smallImages.eq(prevImageIndex);
             if (currentImageIndex === ($('.reviewer-small-photo-container:visible:first').index())) {
                 smallImages.eq(prevImageIndex).removeClass('hidden');
-                // smallImages.eq(currentImageIndex + 4).addClass('hidden');
                 smallImages.eq(currentImageIndex + 3).addClass('hidden');
             }
             if ((currentImageIndex) === ($('.reviewer-small-photo-container:first').index())) {
@@ -163,7 +165,6 @@ $(document).ready(function () {
             if (currentImageIndex === ($('.reviewer-small-photo-container:visible:last').index())) {
                 smallImages.eq(nextImageIndex).removeClass('hidden');
                 smallImages.eq(currentImageIndex - 3).addClass('hidden');
-                // smallImages.eq(currentImageIndex - 4).addClass('hidden');
             }
             if ((currentImageIndex) === ($('.reviewer-small-photo-container:last').index())) {
                 $('.reviewer-small-photo-container.hidden').removeClass('hidden');
@@ -181,7 +182,6 @@ $(document).ready(function () {
 
 
     const smallImages = $('div.reviewer-small-photo-container');
-// let activeSmallImages = $('div.reviewer-small-photo-container.circle-border-small');
     $.each(smallImages, function (index, img) {
         $(img).on('click', function () {
             if (doubleClickCheck) {
@@ -201,57 +201,57 @@ $(document).ready(function () {
 
     });
 
-// -----Masonry ----
+    /*   ----- Masonry & load more button -----  */
 
     $('.load-more').hide();
 
-    $('.grid').masonry({
-        itemSelector: '.grid-item',
-        columnWidth: '.grid-item',
-        gutter: 20,
-    });
 
-    $('.grid-2').masonry({
-        itemSelector: '.grid-item2',
-        columnWidth: '.grid-item2',
-        gutter: 4,
-    });
+    function masonry() {
+        $('.grid').masonry({
+            itemSelector: '.grid-item',
+            columnWidth: '.grid-item',
+            gutter: 20,
+        });
 
-
-});
-let counter = 0;
-$("#best-images-btn").on('click', function () {
-    counter++;
-    if (counter === 2) {
-        $("#best-images-btn").addClass("hidden");
+        $('.grid-2').masonry({
+            itemSelector: '.grid-item2',
+            columnWidth: '.grid-item2',
+            gutter: 4,
+        });
     }
-    $("div.loading.best-images").removeClass("hidden");
-    setTimeout(function () {
-        let i;
-        let j;
-        if (counter === 1) {
-            i = 0;
-            j = 2;
-        }
-        if (counter === 2) {
-            i = 3;
-            j = 5;
-        }
-        for (i; i <= j; i++) {
-            let newImg = $('.grid-item.load-more');
-            $(newImg).eq(i).show();
-            $("div.loading.best-images").addClass("hidden");
-            $('.grid').masonry({
-                itemSelector: '.grid-item',
-                columnWidth: '.grid-item',
-                gutter: 20,
-            });
-            $('.grid-2').masonry({
-                itemSelector: '.grid-item2',
-                columnWidth: '.grid-item2',
-                gutter: 4,
-            });
-        }
-    }, 2000);
 
+    $('#page').imagesLoaded(function () {
+        masonry();
+    });
+
+
+    let bestImgCounter = 0;
+    $("#best-images-btn").on('click', function () {
+        bestImgCounter++;
+        if (bestImgCounter === 2) {
+            $("#best-images-btn").addClass("hidden");
+        }
+        $("div.loading.best-images").removeClass("hidden");
+        setTimeout(function () {
+            let i;
+            let j;
+            if (bestImgCounter === 1) {
+                i = 0;
+                j = 2;
+            }
+            if (bestImgCounter === 2) {
+                i = 3;
+                j = 5;
+            }
+            for (i; i <= j; i++) {
+                let newImg = $('.grid-item.load-more');
+                $(newImg).eq(i).show();
+                $("div.loading.best-images").addClass("hidden");
+                $('#page').imagesLoaded(function () {
+                    masonry();
+                });
+            }
+        }, 2000);
+
+    });
 });
